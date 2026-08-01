@@ -1,0 +1,113 @@
+{
+  "schema_version": "associated-artifact-manifest/v1",
+  "manifest_id": "infrastructure.thehive-case-management-service-associated-artifacts",
+  "manifest_version": "1.0.0",
+  "canonicalization_profile": "associated-artifact-set/v1",
+  "scope": "scenario",
+  "parent_ref": {
+    "ref_kind": "scenario-snapshot",
+    "ref_id": "thehive-case-management-service",
+    "ref_version": null,
+    "ref_digest": "sha256:461bc69992f894cf0adfcdfe051483b96a9841ec92960fb6b1e0f7ceb1d76ebc",
+    "ref_path": null
+  },
+  "artifacts": {
+    "kit-manifest": {
+      "artifact_id": "kit-manifest",
+      "role": "manifest",
+      "media_type": "application/yaml",
+      "uri": "raes-environment-kit:/kit.yaml",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "f05a34006fe11e9f6a80579423eb62ffc2fb81c52d4778fc631eb2beb73ac447"
+      },
+      "size_bytes": 1731,
+      "created_at": "2026-08-01T00:00:00Z",
+      "source": "infrastructure.thehive-case-management-service@1.0.0",
+      "satisfies_refs": [],
+      "sensitivity": "public",
+      "description": null
+    },
+    "module": {
+      "artifact_id": "module",
+      "role": "configuration",
+      "media_type": "application/yaml",
+      "uri": "raes-environment-kit:/module.sdl.yaml",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "214e1bb664038d9904c7e5b38fb35ef8a23e9c4d8e79452103ca3e01729a8fec"
+      },
+      "size_bytes": 1309,
+      "created_at": "2026-08-01T00:00:00Z",
+      "source": "infrastructure.thehive-case-management-service@1.0.0",
+      "satisfies_refs": [],
+      "sensitivity": "public",
+      "description": null
+    },
+    "readme": {
+      "artifact_id": "readme",
+      "role": "documentation",
+      "media_type": "text/markdown",
+      "uri": "raes-environment-kit:/README.md",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "3b814674d9ef0c2451e60812611cdbd55a38d09aa4761098a45f83886000fe3d"
+      },
+      "size_bytes": 269,
+      "created_at": "2026-08-01T00:00:00Z",
+      "source": "infrastructure.thehive-case-management-service@1.0.0",
+      "satisfies_refs": [],
+      "sensitivity": "public",
+      "description": null
+    },
+    "integration-material": {
+      "artifact_id": "integration-material",
+      "role": "operator-guide",
+      "media_type": "text/markdown",
+      "uri": "raes-environment-kit:/assets/integration.md",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "48219b1535a306dae5dbce36c3feaa881d2068e1ce5d5e62693015dfa737450e"
+      },
+      "size_bytes": 138,
+      "created_at": "2026-08-01T00:00:00Z",
+      "source": "infrastructure.thehive-case-management-service@1.0.0",
+      "satisfies_refs": [],
+      "sensitivity": "public",
+      "description": null
+    },
+    "seed-profile": {
+      "artifact_id": "seed-profile",
+      "role": "configuration",
+      "media_type": "application/yaml",
+      "uri": "raes-environment-kit:/assets/seed.yaml",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "10aae44a69d19a92707f59a6450298e347b0e600b41539791af4e3c256be9dd8"
+      },
+      "size_bytes": 168,
+      "created_at": "2026-08-01T00:00:00Z",
+      "source": "infrastructure.thehive-case-management-service@1.0.0",
+      "satisfies_refs": [],
+      "sensitivity": "public",
+      "description": null
+    },
+    "composition-tests": {
+      "artifact_id": "composition-tests",
+      "role": "configuration",
+      "media_type": "application/yaml",
+      "uri": "raes-environment-kit:/tests/composition.yaml",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "fc1fa74a4b68444586b3c1ecd3f61739b55e62ec90e5b2d4abfaf0b7f02a03a6"
+      },
+      "size_bytes": 226,
+      "created_at": "2026-08-01T00:00:00Z",
+      "source": "infrastructure.thehive-case-management-service@1.0.0",
+      "satisfies_refs": [],
+      "sensitivity": "public",
+      "description": null
+    }
+  },
+  "set_digest": "sha256:ab058c933e3d306fd78e83acc69c1f57e79d6ca4213beecb540c8a3873da391b"
+}

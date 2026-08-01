@@ -1,0 +1,5 @@
+schema_version: reference-kit-seed/v1
+kit: infrastructure.search-index-service
+service_instances:
+- search
+fixture_profile: benign-reference

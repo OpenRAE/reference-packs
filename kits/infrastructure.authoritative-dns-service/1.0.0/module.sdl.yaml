@@ -1,0 +1,39 @@
+name: authoritative-dns-service
+version: 1.0.0
+description: Reusable static infrastructure for Authoritative DNS service.
+module:
+  id: infrastructure/authoritative-dns-service
+  version: 1.0.0
+  parameters:
+  - deployment_profile
+  - service_label
+  exports:
+    nodes:
+    - dns
+  description: Composable Authoritative DNS service infrastructure module.
+variables:
+  deployment_profile:
+    type: string
+    default: standard
+    allowed_values:
+    - compact
+    - standard
+  service_label:
+    type: string
+    default: authoritative-dns-service
+nodes:
+  dns:
+    type: vm
+    description: ${deployment_profile} profile for ${service_label} (Authoritative
+      DNS service).
+    source:
+      name: bind9
+      version: '9'
+    resources:
+      cpu: 2
+      ram: 2 GiB
+    services:
+    - port: 53
+      protocol: tcp
+      name: dns
+      description: Declared dns service surface.

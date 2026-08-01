@@ -1,0 +1,39 @@
+name: linux-domain-member
+version: 1.0.0
+description: Reusable static infrastructure for Linux domain member.
+module:
+  id: infrastructure/linux-domain-member
+  version: 1.0.0
+  parameters:
+  - deployment_profile
+  - service_label
+  exports:
+    nodes:
+    - domain_member
+  description: Composable Linux domain member infrastructure module.
+variables:
+  deployment_profile:
+    type: string
+    default: standard
+    allowed_values:
+    - compact
+    - standard
+  service_label:
+    type: string
+    default: linux-domain-member
+nodes:
+  domain_member:
+    type: vm
+    description: ${deployment_profile} profile for ${service_label} (Linux domain
+      member).
+    source:
+      name: linux
+      version: stable
+    resources:
+      cpu: 2
+      ram: 2 GiB
+    services:
+    - port: 22
+      protocol: tcp
+      name: ssh
+      description: Declared ssh service surface.

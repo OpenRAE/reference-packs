@@ -1,0 +1,6 @@
+schema_version: reference-kit-seed/v1
+kit: infrastructure.shuffle-automation-service
+service_instances:
+- automation
+- storage
+fixture_profile: benign-reference

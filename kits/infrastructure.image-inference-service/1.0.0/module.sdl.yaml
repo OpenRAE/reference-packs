@@ -1,0 +1,43 @@
+name: image-inference-service
+version: 1.0.0
+description: Reusable static infrastructure for Image-inference service.
+module:
+  id: infrastructure/image-inference-service
+  version: 1.0.0
+  parameters:
+  - deployment_profile
+  - service_label
+  exports:
+    nodes:
+    - inference
+  description: Composable Image-inference service infrastructure module.
+variables:
+  deployment_profile:
+    type: string
+    default: standard
+    allowed_values:
+    - compact
+    - standard
+  service_label:
+    type: string
+    default: image-inference-service
+nodes:
+  inference:
+    type: vm
+    description: ${deployment_profile} profile for ${service_label} (Image-inference
+      service).
+    source:
+      name: triton-inference-server
+      version: stable
+    resources:
+      cpu: 2
+      ram: 2 GiB
+    services:
+    - port: 8000
+      protocol: tcp
+      name: http
+      description: Declared http service surface.
+    - port: 8001
+      protocol: tcp
+      name: grpc
+      description: Declared grpc service surface.

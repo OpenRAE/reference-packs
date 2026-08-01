@@ -1,0 +1,113 @@
+{
+  "schema_version": "associated-artifact-manifest/v1",
+  "manifest_id": "infrastructure.windows-domain-member-associated-artifacts",
+  "manifest_version": "1.0.0",
+  "canonicalization_profile": "associated-artifact-set/v1",
+  "scope": "scenario",
+  "parent_ref": {
+    "ref_kind": "scenario-snapshot",
+    "ref_id": "windows-domain-member",
+    "ref_version": null,
+    "ref_digest": "sha256:3f188af0b6d929d4daa84a37918cc546f2e197dcdc98a0baaa7c813f3ecaddec",
+    "ref_path": null
+  },
+  "artifacts": {
+    "kit-manifest": {
+      "artifact_id": "kit-manifest",
+      "role": "manifest",
+      "media_type": "application/yaml",
+      "uri": "raes-environment-kit:/kit.yaml",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "a35b8c0fd08fd8b8d6530639a0dee882d42ab7958341dd482be19b8183746f1e"
+      },
+      "size_bytes": 1477,
+      "created_at": "2026-08-01T00:00:00Z",
+      "source": "infrastructure.windows-domain-member@1.0.0",
+      "satisfies_refs": [],
+      "sensitivity": "public",
+      "description": null
+    },
+    "module": {
+      "artifact_id": "module",
+      "role": "configuration",
+      "media_type": "application/yaml",
+      "uri": "raes-environment-kit:/module.sdl.yaml",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "0bee91a25532d7212267955b266ad609f5da0fe2be575a5d5cc3e4f1cf6758c2"
+      },
+      "size_bytes": 898,
+      "created_at": "2026-08-01T00:00:00Z",
+      "source": "infrastructure.windows-domain-member@1.0.0",
+      "satisfies_refs": [],
+      "sensitivity": "public",
+      "description": null
+    },
+    "readme": {
+      "artifact_id": "readme",
+      "role": "documentation",
+      "media_type": "text/markdown",
+      "uri": "raes-environment-kit:/README.md",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "970d80e4123fd3c5270fbec090f97b5926de33a4a8eb8496a3be8b92cf834211"
+      },
+      "size_bytes": 249,
+      "created_at": "2026-08-01T00:00:00Z",
+      "source": "infrastructure.windows-domain-member@1.0.0",
+      "satisfies_refs": [],
+      "sensitivity": "public",
+      "description": null
+    },
+    "integration-material": {
+      "artifact_id": "integration-material",
+      "role": "operator-guide",
+      "media_type": "text/markdown",
+      "uri": "raes-environment-kit:/assets/integration.md",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "0b24acb4a93cd1f94ac15c25773e176266eccd6d3c56759dfe76e25fa1b502cd"
+      },
+      "size_bytes": 128,
+      "created_at": "2026-08-01T00:00:00Z",
+      "source": "infrastructure.windows-domain-member@1.0.0",
+      "satisfies_refs": [],
+      "sensitivity": "public",
+      "description": null
+    },
+    "seed-profile": {
+      "artifact_id": "seed-profile",
+      "role": "configuration",
+      "media_type": "application/yaml",
+      "uri": "raes-environment-kit:/assets/seed.yaml",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "6a39c0a081efa96e89358d0a424b84289f590b58ea8ed2fff0e919d3b965e278"
+      },
+      "size_bytes": 149,
+      "created_at": "2026-08-01T00:00:00Z",
+      "source": "infrastructure.windows-domain-member@1.0.0",
+      "satisfies_refs": [],
+      "sensitivity": "public",
+      "description": null
+    },
+    "composition-tests": {
+      "artifact_id": "composition-tests",
+      "role": "configuration",
+      "media_type": "application/yaml",
+      "uri": "raes-environment-kit:/tests/composition.yaml",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "396e1ee3808ce9b03bed9618c224250a7071b613403036b6755280ed8bed11f4"
+      },
+      "size_bytes": 202,
+      "created_at": "2026-08-01T00:00:00Z",
+      "source": "infrastructure.windows-domain-member@1.0.0",
+      "satisfies_refs": [],
+      "sensitivity": "public",
+      "description": null
+    }
+  },
+  "set_digest": "sha256:83c51ecb6e93bc52dfe38797a12b3475a83a7d762b7e2e1673640597c2c12fae"
+}

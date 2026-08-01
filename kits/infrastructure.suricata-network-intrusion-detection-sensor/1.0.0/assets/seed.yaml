@@ -1,0 +1,5 @@
+schema_version: reference-kit-seed/v1
+kit: infrastructure.suricata-network-intrusion-detection-sensor
+service_instances:
+- sensor
+fixture_profile: benign-reference

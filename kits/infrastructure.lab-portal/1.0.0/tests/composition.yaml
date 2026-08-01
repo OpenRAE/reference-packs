@@ -1,0 +1,7 @@
+default:
+  deployment_profile: standard
+  service_label: lab-portal
+variation:
+  deployment_profile: compact
+  service_label: lab-portal-alternate
+multi_kit_group: collaboration-developer

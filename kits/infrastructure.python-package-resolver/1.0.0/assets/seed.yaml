@@ -1,0 +1,5 @@
+schema_version: reference-kit-seed/v1
+kit: infrastructure.python-package-resolver
+service_instances:
+- resolver
+fixture_profile: benign-reference

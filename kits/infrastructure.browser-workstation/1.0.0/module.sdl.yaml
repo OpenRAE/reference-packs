@@ -1,0 +1,38 @@
+name: browser-workstation
+version: 1.0.0
+description: Reusable static infrastructure for Browser workstation.
+module:
+  id: infrastructure/browser-workstation
+  version: 1.0.0
+  parameters:
+  - deployment_profile
+  - service_label
+  exports:
+    nodes:
+    - workstation
+  description: Composable Browser workstation infrastructure module.
+variables:
+  deployment_profile:
+    type: string
+    default: standard
+    allowed_values:
+    - compact
+    - standard
+  service_label:
+    type: string
+    default: browser-workstation
+nodes:
+  workstation:
+    type: vm
+    description: ${deployment_profile} profile for ${service_label} (Browser workstation).
+    source:
+      name: chromium
+      version: stable
+    resources:
+      cpu: 2
+      ram: 2 GiB
+    services:
+    - port: 3000
+      protocol: tcp
+      name: desktop
+      description: Declared desktop service surface.

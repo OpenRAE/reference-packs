@@ -1,0 +1,39 @@
+name: inference-api-gateway
+version: 1.0.0
+description: Reusable static infrastructure for Inference API gateway.
+module:
+  id: infrastructure/inference-api-gateway
+  version: 1.0.0
+  parameters:
+  - deployment_profile
+  - service_label
+  exports:
+    nodes:
+    - gateway
+  description: Composable Inference API gateway infrastructure module.
+variables:
+  deployment_profile:
+    type: string
+    default: standard
+    allowed_values:
+    - compact
+    - standard
+  service_label:
+    type: string
+    default: inference-api-gateway
+nodes:
+  gateway:
+    type: vm
+    description: ${deployment_profile} profile for ${service_label} (Inference API
+      gateway).
+    source:
+      name: litellm
+      version: stable
+    resources:
+      cpu: 2
+      ram: 2 GiB
+    services:
+    - port: 4000
+      protocol: tcp
+      name: http
+      description: Declared http service surface.

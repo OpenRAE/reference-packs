@@ -1,0 +1,5 @@
+schema_version: reference-kit-seed/v1
+kit: infrastructure.lab-portal
+service_instances:
+- portal
+fixture_profile: benign-reference

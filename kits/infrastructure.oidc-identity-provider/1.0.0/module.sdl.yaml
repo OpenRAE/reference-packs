@@ -1,0 +1,45 @@
+name: oidc-identity-provider
+version: 1.0.0
+description: Reusable static infrastructure for OIDC identity provider.
+module:
+  id: infrastructure/oidc-identity-provider
+  version: 1.0.0
+  parameters:
+  - deployment_profile
+  - service_label
+  exports:
+    nodes:
+    - identity_provider
+    identity_facades:
+    - oidc
+  description: Composable OIDC identity provider infrastructure module.
+variables:
+  deployment_profile:
+    type: string
+    default: standard
+    allowed_values:
+    - compact
+    - standard
+  service_label:
+    type: string
+    default: oidc-identity-provider
+nodes:
+  identity_provider:
+    type: vm
+    description: ${deployment_profile} profile for ${service_label} (OIDC identity
+      provider).
+    source:
+      name: keycloak
+      version: '26'
+    resources:
+      cpu: 2
+      ram: 2 GiB
+    services:
+    - port: 8080
+      protocol: tcp
+      name: http
+      description: Declared http service surface.
+identity_facades:
+  oidc:
+    service_ref: nodes.identity_provider.services.http
+    protocol: oidc

@@ -1,0 +1,38 @@
+name: notebook-environment
+version: 1.0.0
+description: Reusable static infrastructure for Notebook environment.
+module:
+  id: infrastructure/notebook-environment
+  version: 1.0.0
+  parameters:
+  - deployment_profile
+  - service_label
+  exports:
+    nodes:
+    - notebook
+  description: Composable Notebook environment infrastructure module.
+variables:
+  deployment_profile:
+    type: string
+    default: standard
+    allowed_values:
+    - compact
+    - standard
+  service_label:
+    type: string
+    default: notebook-environment
+nodes:
+  notebook:
+    type: vm
+    description: ${deployment_profile} profile for ${service_label} (Notebook environment).
+    source:
+      name: jupyterlab
+      version: '4'
+    resources:
+      cpu: 2
+      ram: 2 GiB
+    services:
+    - port: 8888
+      protocol: tcp
+      name: http
+      description: Declared http service surface.

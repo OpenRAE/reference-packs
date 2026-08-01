@@ -1,0 +1,6 @@
+schema_version: reference-kit-seed/v1
+kit: infrastructure.observability-evidence-store
+service_instances:
+- metrics
+- traces
+fixture_profile: benign-reference

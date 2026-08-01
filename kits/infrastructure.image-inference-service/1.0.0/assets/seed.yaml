@@ -1,0 +1,5 @@
+schema_version: reference-kit-seed/v1
+kit: infrastructure.image-inference-service
+service_instances:
+- inference
+fixture_profile: benign-reference

@@ -1,0 +1,83 @@
+name: windows-active-directory-domain-controller
+version: 1.0.0
+description: Reusable static infrastructure for Windows Active Directory domain controller.
+module:
+  id: infrastructure/windows-active-directory-domain-controller
+  version: 1.0.0
+  parameters:
+  - deployment_profile
+  - service_label
+  exports:
+    nodes:
+    - domain_controller
+    accounts:
+    - directory_administrator
+    identity_domains:
+    - directory
+    identity_forests:
+    - forest
+    relationships:
+    - directory_controller
+  description: Composable Windows Active Directory domain controller infrastructure
+    module.
+variables:
+  deployment_profile:
+    type: string
+    default: standard
+    allowed_values:
+    - compact
+    - standard
+  service_label:
+    type: string
+    default: windows-active-directory-domain-controller
+nodes:
+  domain_controller:
+    type: vm
+    description: ${deployment_profile} profile for ${service_label} (Windows Active
+      Directory domain controller).
+    source:
+      name: windows-server
+      version: '2022'
+    resources:
+      cpu: 2
+      ram: 2 GiB
+    services:
+    - port: 53
+      protocol: tcp
+      name: dns
+      description: Declared dns service surface.
+    - port: 88
+      protocol: tcp
+      name: kerberos
+      description: Declared kerberos service surface.
+    - port: 389
+      protocol: tcp
+      name: ldap
+      description: Declared ldap service surface.
+    - port: 445
+      protocol: tcp
+      name: smb
+      description: Declared smb service surface.
+accounts:
+  directory_administrator:
+    username: administrator
+    node: domain_controller
+    domain_ref: directory
+    description: Declared directory authority account; credential delivery is backend-owned.
+identity_domains:
+  directory:
+    profile: active_directory
+    dns_name: directory.example.test
+    netbios_name: DIRECTORY
+    authority_account_ref: directory_administrator
+identity_forests:
+  forest:
+    root_domain_ref: directory
+    domain_refs:
+    - directory
+relationships:
+  directory_controller:
+    type: domain_controller_for
+    source: domain_controller
+    target: directory
+    domain_controller: {}

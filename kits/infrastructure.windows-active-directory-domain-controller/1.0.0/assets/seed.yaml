@@ -1,0 +1,5 @@
+schema_version: reference-kit-seed/v1
+kit: infrastructure.windows-active-directory-domain-controller
+service_instances:
+- domain_controller
+fixture_profile: benign-reference

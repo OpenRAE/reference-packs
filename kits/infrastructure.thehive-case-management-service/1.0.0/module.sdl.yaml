@@ -1,0 +1,55 @@
+name: thehive-case-management-service
+version: 1.0.0
+description: Reusable static infrastructure for TheHive case-management service.
+module:
+  id: infrastructure/thehive-case-management-service
+  version: 1.0.0
+  parameters:
+  - deployment_profile
+  - service_label
+  exports:
+    nodes:
+    - case_manager
+    - storage
+  description: Composable TheHive case-management service infrastructure module.
+variables:
+  deployment_profile:
+    type: string
+    default: standard
+    allowed_values:
+    - compact
+    - standard
+  service_label:
+    type: string
+    default: thehive-case-management-service
+nodes:
+  case_manager:
+    type: vm
+    description: ${deployment_profile} profile for ${service_label} (TheHive case-management
+      service).
+    source:
+      name: thehive
+      version: '5'
+    resources:
+      cpu: 2
+      ram: 2 GiB
+    services:
+    - port: 9000
+      protocol: tcp
+      name: http
+      description: Declared http service surface.
+  storage:
+    type: vm
+    description: ${deployment_profile} profile for ${service_label} (TheHive case-management
+      service).
+    source:
+      name: cassandra
+      version: '5'
+    resources:
+      cpu: 2
+      ram: 2 GiB
+    services:
+    - port: 9042
+      protocol: tcp
+      name: cql
+      description: Declared cql service surface.

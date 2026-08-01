@@ -1,0 +1,113 @@
+{
+  "schema_version": "associated-artifact-manifest/v1",
+  "manifest_id": "infrastructure.ssh-accessible-linux-host-associated-artifacts",
+  "manifest_version": "1.0.0",
+  "canonicalization_profile": "associated-artifact-set/v1",
+  "scope": "scenario",
+  "parent_ref": {
+    "ref_kind": "scenario-snapshot",
+    "ref_id": "ssh-accessible-linux-host",
+    "ref_version": null,
+    "ref_digest": "sha256:e3ec481cd24b2722335d670497bc41a22a29a10d1e0a7e5dc7d1ee8473062b8b",
+    "ref_path": null
+  },
+  "artifacts": {
+    "kit-manifest": {
+      "artifact_id": "kit-manifest",
+      "role": "manifest",
+      "media_type": "application/yaml",
+      "uri": "raes-environment-kit:/kit.yaml",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "be9a040c3498ef623c1e7e7203a9fa645d294e9635589ef88c2d72b798c9d281"
+      },
+      "size_bytes": 1488,
+      "created_at": "2026-08-01T00:00:00Z",
+      "source": "infrastructure.ssh-accessible-linux-host@1.0.0",
+      "satisfies_refs": [],
+      "sensitivity": "public",
+      "description": null
+    },
+    "module": {
+      "artifact_id": "module",
+      "role": "configuration",
+      "media_type": "application/yaml",
+      "uri": "raes-environment-kit:/module.sdl.yaml",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "cb5fc898b8d98cb8ea822a69e7efd18714d6adf10a952fb8658e545485ac00c6"
+      },
+      "size_bytes": 901,
+      "created_at": "2026-08-01T00:00:00Z",
+      "source": "infrastructure.ssh-accessible-linux-host@1.0.0",
+      "satisfies_refs": [],
+      "sensitivity": "public",
+      "description": null
+    },
+    "readme": {
+      "artifact_id": "readme",
+      "role": "documentation",
+      "media_type": "text/markdown",
+      "uri": "raes-environment-kit:/README.md",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "5918d54e6a010ec52a709319cf5c7fc3e1ce5447a0f1e4d6af7c9b6bf3887849"
+      },
+      "size_bytes": 257,
+      "created_at": "2026-08-01T00:00:00Z",
+      "source": "infrastructure.ssh-accessible-linux-host@1.0.0",
+      "satisfies_refs": [],
+      "sensitivity": "public",
+      "description": null
+    },
+    "integration-material": {
+      "artifact_id": "integration-material",
+      "role": "operator-guide",
+      "media_type": "text/markdown",
+      "uri": "raes-environment-kit:/assets/integration.md",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "ebec9f5d77320c41c218747aa24918f02481bbe18aaed23ae05e2c0aa3511120"
+      },
+      "size_bytes": 132,
+      "created_at": "2026-08-01T00:00:00Z",
+      "source": "infrastructure.ssh-accessible-linux-host@1.0.0",
+      "satisfies_refs": [],
+      "sensitivity": "public",
+      "description": null
+    },
+    "seed-profile": {
+      "artifact_id": "seed-profile",
+      "role": "configuration",
+      "media_type": "application/yaml",
+      "uri": "raes-environment-kit:/assets/seed.yaml",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "0a42163cff2f95c20594ee308ca8e761c295d669b332caf08af104330fba62ed"
+      },
+      "size_bytes": 148,
+      "created_at": "2026-08-01T00:00:00Z",
+      "source": "infrastructure.ssh-accessible-linux-host@1.0.0",
+      "satisfies_refs": [],
+      "sensitivity": "public",
+      "description": null
+    },
+    "composition-tests": {
+      "artifact_id": "composition-tests",
+      "role": "configuration",
+      "media_type": "application/yaml",
+      "uri": "raes-environment-kit:/tests/composition.yaml",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "a7e05386fe14da49249ace9019bea6ec9731fb6ca9be3e5c5a9c677a557bad21"
+      },
+      "size_bytes": 213,
+      "created_at": "2026-08-01T00:00:00Z",
+      "source": "infrastructure.ssh-accessible-linux-host@1.0.0",
+      "satisfies_refs": [],
+      "sensitivity": "public",
+      "description": null
+    }
+  },
+  "set_digest": "sha256:af9ec482221cc281bd7145526924d597e44b243395fe3bedd47e5c9f526f06aa"
+}

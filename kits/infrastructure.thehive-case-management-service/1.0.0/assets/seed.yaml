@@ -1,0 +1,6 @@
+schema_version: reference-kit-seed/v1
+kit: infrastructure.thehive-case-management-service
+service_instances:
+- case_manager
+- storage
+fixture_profile: benign-reference

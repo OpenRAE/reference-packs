@@ -1,0 +1,75 @@
+name: wazuh-security-monitoring-stack
+version: 1.0.0
+description: Reusable static infrastructure for Wazuh security monitoring stack.
+module:
+  id: infrastructure/wazuh-security-monitoring-stack
+  version: 1.0.0
+  parameters:
+  - deployment_profile
+  - service_label
+  exports:
+    nodes:
+    - manager
+    - indexer
+    - dashboard
+  description: Composable Wazuh security monitoring stack infrastructure module.
+variables:
+  deployment_profile:
+    type: string
+    default: standard
+    allowed_values:
+    - compact
+    - standard
+  service_label:
+    type: string
+    default: wazuh-security-monitoring-stack
+nodes:
+  manager:
+    type: vm
+    description: ${deployment_profile} profile for ${service_label} (Wazuh security
+      monitoring stack).
+    source:
+      name: wazuh-manager
+      version: '4'
+    resources:
+      cpu: 2
+      ram: 2 GiB
+    services:
+    - port: 1514
+      protocol: tcp
+      name: events
+      description: Declared events service surface.
+    - port: 55000
+      protocol: tcp
+      name: api
+      description: Declared api service surface.
+  indexer:
+    type: vm
+    description: ${deployment_profile} profile for ${service_label} (Wazuh security
+      monitoring stack).
+    source:
+      name: wazuh-indexer
+      version: '4'
+    resources:
+      cpu: 2
+      ram: 2 GiB
+    services:
+    - port: 9200
+      protocol: tcp
+      name: http
+      description: Declared http service surface.
+  dashboard:
+    type: vm
+    description: ${deployment_profile} profile for ${service_label} (Wazuh security
+      monitoring stack).
+    source:
+      name: wazuh-dashboard
+      version: '4'
+    resources:
+      cpu: 2
+      ram: 2 GiB
+    services:
+    - port: 5601
+      protocol: tcp
+      name: http
+      description: Declared http service surface.

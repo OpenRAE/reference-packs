@@ -1,0 +1,5 @@
+schema_version: reference-kit-seed/v1
+kit: infrastructure.git-forge
+service_instances:
+- forge
+fixture_profile: benign-reference

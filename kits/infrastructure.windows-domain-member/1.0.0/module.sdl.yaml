@@ -1,0 +1,39 @@
+name: windows-domain-member
+version: 1.0.0
+description: Reusable static infrastructure for Windows domain member.
+module:
+  id: infrastructure/windows-domain-member
+  version: 1.0.0
+  parameters:
+  - deployment_profile
+  - service_label
+  exports:
+    nodes:
+    - domain_member
+  description: Composable Windows domain member infrastructure module.
+variables:
+  deployment_profile:
+    type: string
+    default: standard
+    allowed_values:
+    - compact
+    - standard
+  service_label:
+    type: string
+    default: windows-domain-member
+nodes:
+  domain_member:
+    type: vm
+    description: ${deployment_profile} profile for ${service_label} (Windows domain
+      member).
+    source:
+      name: windows-server
+      version: '2022'
+    resources:
+      cpu: 2
+      ram: 2 GiB
+    services:
+    - port: 3389
+      protocol: tcp
+      name: rdp
+      description: Declared rdp service surface.

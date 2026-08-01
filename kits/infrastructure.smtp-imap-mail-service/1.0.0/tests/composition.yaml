@@ -1,0 +1,7 @@
+default:
+  deployment_profile: standard
+  service_label: smtp-imap-mail-service
+variation:
+  deployment_profile: compact
+  service_label: smtp-imap-mail-service-alternate
+multi_kit_group: network-shared

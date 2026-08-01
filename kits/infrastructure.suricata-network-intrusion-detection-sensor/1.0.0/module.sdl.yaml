@@ -1,0 +1,41 @@
+name: suricata-network-intrusion-detection-sensor
+version: 1.0.0
+description: Reusable static infrastructure for Suricata network intrusion-detection
+  sensor.
+module:
+  id: infrastructure/suricata-network-intrusion-detection-sensor
+  version: 1.0.0
+  parameters:
+  - deployment_profile
+  - service_label
+  exports:
+    nodes:
+    - sensor
+  description: Composable Suricata network intrusion-detection sensor infrastructure
+    module.
+variables:
+  deployment_profile:
+    type: string
+    default: standard
+    allowed_values:
+    - compact
+    - standard
+  service_label:
+    type: string
+    default: suricata-network-intrusion-detection-sensor
+nodes:
+  sensor:
+    type: vm
+    description: ${deployment_profile} profile for ${service_label} (Suricata network
+      intrusion-detection sensor).
+    source:
+      name: suricata
+      version: '8'
+    resources:
+      cpu: 2
+      ram: 2 GiB
+    services:
+    - port: 5514
+      protocol: tcp
+      name: events
+      description: Declared events service surface.

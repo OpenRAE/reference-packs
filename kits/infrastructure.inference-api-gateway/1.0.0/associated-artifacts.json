@@ -1,0 +1,113 @@
+{
+  "schema_version": "associated-artifact-manifest/v1",
+  "manifest_id": "infrastructure.inference-api-gateway-associated-artifacts",
+  "manifest_version": "1.0.0",
+  "canonicalization_profile": "associated-artifact-set/v1",
+  "scope": "scenario",
+  "parent_ref": {
+    "ref_kind": "scenario-snapshot",
+    "ref_id": "inference-api-gateway",
+    "ref_version": null,
+    "ref_digest": "sha256:bdf4dbbd3dff070917352f84d444e748ed92f7d5d5c89cb0318f4454f3270de5",
+    "ref_path": null
+  },
+  "artifacts": {
+    "kit-manifest": {
+      "artifact_id": "kit-manifest",
+      "role": "manifest",
+      "media_type": "application/yaml",
+      "uri": "raes-environment-kit:/kit.yaml",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "addad2fe5f48329a6825a1a2b7934a1762d8bc7ea2cbe3278175097ae0fd72ba"
+      },
+      "size_bytes": 1459,
+      "created_at": "2026-08-01T00:00:00Z",
+      "source": "infrastructure.inference-api-gateway@1.0.0",
+      "satisfies_refs": [],
+      "sensitivity": "public",
+      "description": null
+    },
+    "module": {
+      "artifact_id": "module",
+      "role": "configuration",
+      "media_type": "application/yaml",
+      "uri": "raes-environment-kit:/module.sdl.yaml",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "a1b904c236b250eeaaf8382f5ec7a433a569a8b97aea78a19cc153336aa592c6"
+      },
+      "size_bytes": 881,
+      "created_at": "2026-08-01T00:00:00Z",
+      "source": "infrastructure.inference-api-gateway@1.0.0",
+      "satisfies_refs": [],
+      "sensitivity": "public",
+      "description": null
+    },
+    "readme": {
+      "artifact_id": "readme",
+      "role": "documentation",
+      "media_type": "text/markdown",
+      "uri": "raes-environment-kit:/README.md",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "4d41b0ebe6e6fd68087640985304546d41067116dbe69c7e797448a33f380858"
+      },
+      "size_bytes": 249,
+      "created_at": "2026-08-01T00:00:00Z",
+      "source": "infrastructure.inference-api-gateway@1.0.0",
+      "satisfies_refs": [],
+      "sensitivity": "public",
+      "description": null
+    },
+    "integration-material": {
+      "artifact_id": "integration-material",
+      "role": "operator-guide",
+      "media_type": "text/markdown",
+      "uri": "raes-environment-kit:/assets/integration.md",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "5c8d00ce0c7da01b4853f65dc82772eab33d9c1632b9fecc638229baa669d491"
+      },
+      "size_bytes": 128,
+      "created_at": "2026-08-01T00:00:00Z",
+      "source": "infrastructure.inference-api-gateway@1.0.0",
+      "satisfies_refs": [],
+      "sensitivity": "public",
+      "description": null
+    },
+    "seed-profile": {
+      "artifact_id": "seed-profile",
+      "role": "configuration",
+      "media_type": "application/yaml",
+      "uri": "raes-environment-kit:/assets/seed.yaml",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "e48c436d7b490e9df45f36c55ac4ff0600a5ba144db96dbb44cdd8a91f9e9de3"
+      },
+      "size_bytes": 143,
+      "created_at": "2026-08-01T00:00:00Z",
+      "source": "infrastructure.inference-api-gateway@1.0.0",
+      "satisfies_refs": [],
+      "sensitivity": "public",
+      "description": null
+    },
+    "composition-tests": {
+      "artifact_id": "composition-tests",
+      "role": "configuration",
+      "media_type": "application/yaml",
+      "uri": "raes-environment-kit:/tests/composition.yaml",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "87229fd31b641ad5329238e92d1142eb9e69689a8e54ced349a67e838f14c33e"
+      },
+      "size_bytes": 195,
+      "created_at": "2026-08-01T00:00:00Z",
+      "source": "infrastructure.inference-api-gateway@1.0.0",
+      "satisfies_refs": [],
+      "sensitivity": "public",
+      "description": null
+    }
+  },
+  "set_digest": "sha256:3756930aa9a9ba53bd0db3ea22ed9d55463e0320f99960438f048e90b525bdd6"
+}

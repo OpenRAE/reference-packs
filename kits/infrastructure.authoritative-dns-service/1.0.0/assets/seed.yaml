@@ -1,0 +1,5 @@
+schema_version: reference-kit-seed/v1
+kit: infrastructure.authoritative-dns-service
+service_instances:
+- dns
+fixture_profile: benign-reference

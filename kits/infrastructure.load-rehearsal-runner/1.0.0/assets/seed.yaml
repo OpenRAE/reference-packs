@@ -1,0 +1,5 @@
+schema_version: reference-kit-seed/v1
+kit: infrastructure.load-rehearsal-runner
+service_instances:
+- runner
+fixture_profile: benign-reference

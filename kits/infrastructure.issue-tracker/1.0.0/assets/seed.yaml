@@ -1,0 +1,5 @@
+schema_version: reference-kit-seed/v1
+kit: infrastructure.issue-tracker
+service_instances:
+- tracker
+fixture_profile: benign-reference

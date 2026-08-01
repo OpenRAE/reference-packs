@@ -1,0 +1,43 @@
+name: smtp-imap-mail-service
+version: 1.0.0
+description: Reusable static infrastructure for SMTP/IMAP mail service.
+module:
+  id: infrastructure/smtp-imap-mail-service
+  version: 1.0.0
+  parameters:
+  - deployment_profile
+  - service_label
+  exports:
+    nodes:
+    - mail
+  description: Composable SMTP/IMAP mail service infrastructure module.
+variables:
+  deployment_profile:
+    type: string
+    default: standard
+    allowed_values:
+    - compact
+    - standard
+  service_label:
+    type: string
+    default: smtp-imap-mail-service
+nodes:
+  mail:
+    type: vm
+    description: ${deployment_profile} profile for ${service_label} (SMTP/IMAP mail
+      service).
+    source:
+      name: mail-server
+      version: stable
+    resources:
+      cpu: 2
+      ram: 2 GiB
+    services:
+    - port: 25
+      protocol: tcp
+      name: smtp
+      description: Declared smtp service surface.
+    - port: 143
+      protocol: tcp
+      name: imap
+      description: Declared imap service surface.

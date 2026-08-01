@@ -1,0 +1,113 @@
+{
+  "schema_version": "associated-artifact-manifest/v1",
+  "manifest_id": "infrastructure.webmail-service-associated-artifacts",
+  "manifest_version": "1.0.0",
+  "canonicalization_profile": "associated-artifact-set/v1",
+  "scope": "scenario",
+  "parent_ref": {
+    "ref_kind": "scenario-snapshot",
+    "ref_id": "webmail-service",
+    "ref_version": null,
+    "ref_digest": "sha256:9406875b3a28b602be3ca108e3fb0595791dde68b0ae00fd4275f925336104de",
+    "ref_path": null
+  },
+  "artifacts": {
+    "kit-manifest": {
+      "artifact_id": "kit-manifest",
+      "role": "manifest",
+      "media_type": "application/yaml",
+      "uri": "raes-environment-kit:/kit.yaml",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "e51bb8a7e4eeb44c0105e40f9b7b8a614be6d482372d2552399605c828982abc"
+      },
+      "size_bytes": 1432,
+      "created_at": "2026-08-01T00:00:00Z",
+      "source": "infrastructure.webmail-service@1.0.0",
+      "satisfies_refs": [],
+      "sensitivity": "public",
+      "description": null
+    },
+    "module": {
+      "artifact_id": "module",
+      "role": "configuration",
+      "media_type": "application/yaml",
+      "uri": "raes-environment-kit:/module.sdl.yaml",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "87cd7b89c0a53baf0922689e294dbaf0d9ade0039bd37ba30a1a5799ff162cf1"
+      },
+      "size_bytes": 838,
+      "created_at": "2026-08-01T00:00:00Z",
+      "source": "infrastructure.webmail-service@1.0.0",
+      "satisfies_refs": [],
+      "sensitivity": "public",
+      "description": null
+    },
+    "readme": {
+      "artifact_id": "readme",
+      "role": "documentation",
+      "media_type": "text/markdown",
+      "uri": "raes-environment-kit:/README.md",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "38597aa0f27cb927638fd11d95ae0002b934fecd0929447104b3510a0fe1818a"
+      },
+      "size_bytes": 237,
+      "created_at": "2026-08-01T00:00:00Z",
+      "source": "infrastructure.webmail-service@1.0.0",
+      "satisfies_refs": [],
+      "sensitivity": "public",
+      "description": null
+    },
+    "integration-material": {
+      "artifact_id": "integration-material",
+      "role": "operator-guide",
+      "media_type": "text/markdown",
+      "uri": "raes-environment-kit:/assets/integration.md",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "a54b0b972723cf9d825f21c70c55283cb4d82cdbb5a97f236ba0dca4c2f75ab6"
+      },
+      "size_bytes": 122,
+      "created_at": "2026-08-01T00:00:00Z",
+      "source": "infrastructure.webmail-service@1.0.0",
+      "satisfies_refs": [],
+      "sensitivity": "public",
+      "description": null
+    },
+    "seed-profile": {
+      "artifact_id": "seed-profile",
+      "role": "configuration",
+      "media_type": "application/yaml",
+      "uri": "raes-environment-kit:/assets/seed.yaml",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "1f5782a733ab6848b2d8e9dfe1108ca74d847ce6f08dcc3b60698545eb6156b6"
+      },
+      "size_bytes": 137,
+      "created_at": "2026-08-01T00:00:00Z",
+      "source": "infrastructure.webmail-service@1.0.0",
+      "satisfies_refs": [],
+      "sensitivity": "public",
+      "description": null
+    },
+    "composition-tests": {
+      "artifact_id": "composition-tests",
+      "role": "configuration",
+      "media_type": "application/yaml",
+      "uri": "raes-environment-kit:/tests/composition.yaml",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "f12bc52e71003f6610f957bee50735d82cfccb5b89d79380714da1f6905b77cd"
+      },
+      "size_bytes": 189,
+      "created_at": "2026-08-01T00:00:00Z",
+      "source": "infrastructure.webmail-service@1.0.0",
+      "satisfies_refs": [],
+      "sensitivity": "public",
+      "description": null
+    }
+  },
+  "set_digest": "sha256:1b35549b11924723f30477b6b475130bf69fa9c2d7d05363ec530fa767be22fa"
+}

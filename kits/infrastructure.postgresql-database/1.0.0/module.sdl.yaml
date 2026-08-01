@@ -1,0 +1,38 @@
+name: postgresql-database
+version: 1.0.0
+description: Reusable static infrastructure for PostgreSQL database.
+module:
+  id: infrastructure/postgresql-database
+  version: 1.0.0
+  parameters:
+  - deployment_profile
+  - service_label
+  exports:
+    nodes:
+    - database
+  description: Composable PostgreSQL database infrastructure module.
+variables:
+  deployment_profile:
+    type: string
+    default: standard
+    allowed_values:
+    - compact
+    - standard
+  service_label:
+    type: string
+    default: postgresql-database
+nodes:
+  database:
+    type: vm
+    description: ${deployment_profile} profile for ${service_label} (PostgreSQL database).
+    source:
+      name: postgresql
+      version: '17'
+    resources:
+      cpu: 2
+      ram: 2 GiB
+    services:
+    - port: 5432
+      protocol: tcp
+      name: postgresql
+      description: Declared postgresql service surface.

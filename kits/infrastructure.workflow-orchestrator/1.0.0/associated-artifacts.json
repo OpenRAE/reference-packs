@@ -1,0 +1,113 @@
+{
+  "schema_version": "associated-artifact-manifest/v1",
+  "manifest_id": "infrastructure.workflow-orchestrator-associated-artifacts",
+  "manifest_version": "1.0.0",
+  "canonicalization_profile": "associated-artifact-set/v1",
+  "scope": "scenario",
+  "parent_ref": {
+    "ref_kind": "scenario-snapshot",
+    "ref_id": "workflow-orchestrator",
+    "ref_version": null,
+    "ref_digest": "sha256:2a17cf6f86f669a34121c6ebdaf794b65fdd9bf4414bf30923d6674ce945667c",
+    "ref_path": null
+  },
+  "artifacts": {
+    "kit-manifest": {
+      "artifact_id": "kit-manifest",
+      "role": "manifest",
+      "media_type": "application/yaml",
+      "uri": "raes-environment-kit:/kit.yaml",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "b073daac4a6778a361739885fb268d12d548eb040d86e2c037dbc7672793701b"
+      },
+      "size_bytes": 1464,
+      "created_at": "2026-08-01T00:00:00Z",
+      "source": "infrastructure.workflow-orchestrator@1.0.0",
+      "satisfies_refs": [],
+      "sensitivity": "public",
+      "description": null
+    },
+    "module": {
+      "artifact_id": "module",
+      "role": "configuration",
+      "media_type": "application/yaml",
+      "uri": "raes-environment-kit:/module.sdl.yaml",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "3c6d4f36ffb5398706b17eee8ee1532c4c21c2a9e77a7c0e4d4ce6b740b50b15"
+      },
+      "size_bytes": 882,
+      "created_at": "2026-08-01T00:00:00Z",
+      "source": "infrastructure.workflow-orchestrator@1.0.0",
+      "satisfies_refs": [],
+      "sensitivity": "public",
+      "description": null
+    },
+    "readme": {
+      "artifact_id": "readme",
+      "role": "documentation",
+      "media_type": "text/markdown",
+      "uri": "raes-environment-kit:/README.md",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "3694590c39608135337ce25bd750697c862a2c2af67f652f759c3b9768a4dc63"
+      },
+      "size_bytes": 249,
+      "created_at": "2026-08-01T00:00:00Z",
+      "source": "infrastructure.workflow-orchestrator@1.0.0",
+      "satisfies_refs": [],
+      "sensitivity": "public",
+      "description": null
+    },
+    "integration-material": {
+      "artifact_id": "integration-material",
+      "role": "operator-guide",
+      "media_type": "text/markdown",
+      "uri": "raes-environment-kit:/assets/integration.md",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "77b61c4d3f3338fe7818bc849383f12b8b40d89a4ed7dfd6d1276538422626d4"
+      },
+      "size_bytes": 128,
+      "created_at": "2026-08-01T00:00:00Z",
+      "source": "infrastructure.workflow-orchestrator@1.0.0",
+      "satisfies_refs": [],
+      "sensitivity": "public",
+      "description": null
+    },
+    "seed-profile": {
+      "artifact_id": "seed-profile",
+      "role": "configuration",
+      "media_type": "application/yaml",
+      "uri": "raes-environment-kit:/assets/seed.yaml",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "137a62745f84fe23bd3a1a057b90ed46fb2bc90598296b81708f3e5eab72a3e6"
+      },
+      "size_bytes": 148,
+      "created_at": "2026-08-01T00:00:00Z",
+      "source": "infrastructure.workflow-orchestrator@1.0.0",
+      "satisfies_refs": [],
+      "sensitivity": "public",
+      "description": null
+    },
+    "composition-tests": {
+      "artifact_id": "composition-tests",
+      "role": "configuration",
+      "media_type": "application/yaml",
+      "uri": "raes-environment-kit:/tests/composition.yaml",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "f8876036cb9fe28ec28bdf077217990970dd0519183826c97121ef3f61e8d0b7"
+      },
+      "size_bytes": 200,
+      "created_at": "2026-08-01T00:00:00Z",
+      "source": "infrastructure.workflow-orchestrator@1.0.0",
+      "satisfies_refs": [],
+      "sensitivity": "public",
+      "description": null
+    }
+  },
+  "set_digest": "sha256:4149e46ba351ad8f4c5edeffe101e9aff6df208b2655344b05ff86d03ffaa922"
+}

@@ -1,0 +1,113 @@
+{
+  "schema_version": "associated-artifact-manifest/v1",
+  "manifest_id": "infrastructure.postgresql-database-associated-artifacts",
+  "manifest_version": "1.0.0",
+  "canonicalization_profile": "associated-artifact-set/v1",
+  "scope": "scenario",
+  "parent_ref": {
+    "ref_kind": "scenario-snapshot",
+    "ref_id": "postgresql-database",
+    "ref_version": null,
+    "ref_digest": "sha256:8b33b51d000107651866e73db8769aeae1ba717bcd19c9e7bb221e78e43ed5d0",
+    "ref_path": null
+  },
+  "artifacts": {
+    "kit-manifest": {
+      "artifact_id": "kit-manifest",
+      "role": "manifest",
+      "media_type": "application/yaml",
+      "uri": "raes-environment-kit:/kit.yaml",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "8a59e307422983caaea70c70841ed706037d47cccdff8d0f3580de753c900e61"
+      },
+      "size_bytes": 1454,
+      "created_at": "2026-08-01T00:00:00Z",
+      "source": "infrastructure.postgresql-database@1.0.0",
+      "satisfies_refs": [],
+      "sensitivity": "public",
+      "description": null
+    },
+    "module": {
+      "artifact_id": "module",
+      "role": "configuration",
+      "media_type": "application/yaml",
+      "uri": "raes-environment-kit:/module.sdl.yaml",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "401679719bc9bc8c124803bae6583cabdeca501726266d5ac41f775904a81f4f"
+      },
+      "size_bytes": 878,
+      "created_at": "2026-08-01T00:00:00Z",
+      "source": "infrastructure.postgresql-database@1.0.0",
+      "satisfies_refs": [],
+      "sensitivity": "public",
+      "description": null
+    },
+    "readme": {
+      "artifact_id": "readme",
+      "role": "documentation",
+      "media_type": "text/markdown",
+      "uri": "raes-environment-kit:/README.md",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "3da444deab913dda95cf86d3e5612e4288837089ea57763f318c1328529a20e4"
+      },
+      "size_bytes": 245,
+      "created_at": "2026-08-01T00:00:00Z",
+      "source": "infrastructure.postgresql-database@1.0.0",
+      "satisfies_refs": [],
+      "sensitivity": "public",
+      "description": null
+    },
+    "integration-material": {
+      "artifact_id": "integration-material",
+      "role": "operator-guide",
+      "media_type": "text/markdown",
+      "uri": "raes-environment-kit:/assets/integration.md",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "3dcc83bc33ea91ba055eca11ea30a1eec65f92063736d168174ab08d0b6113cb"
+      },
+      "size_bytes": 126,
+      "created_at": "2026-08-01T00:00:00Z",
+      "source": "infrastructure.postgresql-database@1.0.0",
+      "satisfies_refs": [],
+      "sensitivity": "public",
+      "description": null
+    },
+    "seed-profile": {
+      "artifact_id": "seed-profile",
+      "role": "configuration",
+      "media_type": "application/yaml",
+      "uri": "raes-environment-kit:/assets/seed.yaml",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "9f97c309c590e211d0478a26e5b2b8bbb5fad0379cfee70e15b812e57b1d3fb2"
+      },
+      "size_bytes": 142,
+      "created_at": "2026-08-01T00:00:00Z",
+      "source": "infrastructure.postgresql-database@1.0.0",
+      "satisfies_refs": [],
+      "sensitivity": "public",
+      "description": null
+    },
+    "composition-tests": {
+      "artifact_id": "composition-tests",
+      "role": "configuration",
+      "media_type": "application/yaml",
+      "uri": "raes-environment-kit:/tests/composition.yaml",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "601b57f069ef305f7bf9844f1e29f740c34a8a220520e77977176bdb349754d9"
+      },
+      "size_bytes": 196,
+      "created_at": "2026-08-01T00:00:00Z",
+      "source": "infrastructure.postgresql-database@1.0.0",
+      "satisfies_refs": [],
+      "sensitivity": "public",
+      "description": null
+    }
+  },
+  "set_digest": "sha256:b79f86caeaf32135a52cb884bbf238a475faa30bbe4602fb2a2639579f1ad87b"
+}

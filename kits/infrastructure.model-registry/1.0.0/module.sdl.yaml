@@ -1,0 +1,38 @@
+name: model-registry
+version: 1.0.0
+description: Reusable static infrastructure for Model registry.
+module:
+  id: infrastructure/model-registry
+  version: 1.0.0
+  parameters:
+  - deployment_profile
+  - service_label
+  exports:
+    nodes:
+    - registry
+  description: Composable Model registry infrastructure module.
+variables:
+  deployment_profile:
+    type: string
+    default: standard
+    allowed_values:
+    - compact
+    - standard
+  service_label:
+    type: string
+    default: model-registry
+nodes:
+  registry:
+    type: vm
+    description: ${deployment_profile} profile for ${service_label} (Model registry).
+    source:
+      name: mlflow
+      version: '3'
+    resources:
+      cpu: 2
+      ram: 2 GiB
+    services:
+    - port: 5000
+      protocol: tcp
+      name: http
+      description: Declared http service surface.

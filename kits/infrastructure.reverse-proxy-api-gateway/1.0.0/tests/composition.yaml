@@ -1,0 +1,7 @@
+default:
+  deployment_profile: standard
+  service_label: reverse-proxy-api-gateway
+variation:
+  deployment_profile: compact
+  service_label: reverse-proxy-api-gateway-alternate
+multi_kit_group: network-shared

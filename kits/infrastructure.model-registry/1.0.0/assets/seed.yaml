@@ -1,0 +1,5 @@
+schema_version: reference-kit-seed/v1
+kit: infrastructure.model-registry
+service_instances:
+- registry
+fixture_profile: benign-reference

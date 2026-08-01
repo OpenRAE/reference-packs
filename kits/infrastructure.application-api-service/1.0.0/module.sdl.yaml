@@ -1,0 +1,39 @@
+name: application-api-service
+version: 1.0.0
+description: Reusable static infrastructure for Application/API service.
+module:
+  id: infrastructure/application-api-service
+  version: 1.0.0
+  parameters:
+  - deployment_profile
+  - service_label
+  exports:
+    nodes:
+    - application
+  description: Composable Application/API service infrastructure module.
+variables:
+  deployment_profile:
+    type: string
+    default: standard
+    allowed_values:
+    - compact
+    - standard
+  service_label:
+    type: string
+    default: application-api-service
+nodes:
+  application:
+    type: vm
+    description: ${deployment_profile} profile for ${service_label} (Application/API
+      service).
+    source:
+      name: application-service
+      version: stable
+    resources:
+      cpu: 2
+      ram: 2 GiB
+    services:
+    - port: 8080
+      protocol: tcp
+      name: http
+      description: Declared http service surface.

@@ -1,0 +1,38 @@
+name: smb-file-service
+version: 1.0.0
+description: Reusable static infrastructure for SMB file service.
+module:
+  id: infrastructure/smb-file-service
+  version: 1.0.0
+  parameters:
+  - deployment_profile
+  - service_label
+  exports:
+    nodes:
+    - file_service
+  description: Composable SMB file service infrastructure module.
+variables:
+  deployment_profile:
+    type: string
+    default: standard
+    allowed_values:
+    - compact
+    - standard
+  service_label:
+    type: string
+    default: smb-file-service
+nodes:
+  file_service:
+    type: vm
+    description: ${deployment_profile} profile for ${service_label} (SMB file service).
+    source:
+      name: samba
+      version: '4'
+    resources:
+      cpu: 2
+      ram: 2 GiB
+    services:
+    - port: 445
+      protocol: tcp
+      name: smb
+      description: Declared smb service surface.

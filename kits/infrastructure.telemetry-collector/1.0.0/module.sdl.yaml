@@ -1,0 +1,42 @@
+name: telemetry-collector
+version: 1.0.0
+description: Reusable static infrastructure for Telemetry collector.
+module:
+  id: infrastructure/telemetry-collector
+  version: 1.0.0
+  parameters:
+  - deployment_profile
+  - service_label
+  exports:
+    nodes:
+    - collector
+  description: Composable Telemetry collector infrastructure module.
+variables:
+  deployment_profile:
+    type: string
+    default: standard
+    allowed_values:
+    - compact
+    - standard
+  service_label:
+    type: string
+    default: telemetry-collector
+nodes:
+  collector:
+    type: vm
+    description: ${deployment_profile} profile for ${service_label} (Telemetry collector).
+    source:
+      name: opentelemetry-collector
+      version: stable
+    resources:
+      cpu: 2
+      ram: 2 GiB
+    services:
+    - port: 4317
+      protocol: tcp
+      name: otlp-grpc
+      description: Declared otlp-grpc service surface.
+    - port: 4318
+      protocol: tcp
+      name: otlp-http
+      description: Declared otlp-http service surface.

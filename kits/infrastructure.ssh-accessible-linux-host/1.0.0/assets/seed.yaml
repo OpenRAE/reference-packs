@@ -1,0 +1,5 @@
+schema_version: reference-kit-seed/v1
+kit: infrastructure.ssh-accessible-linux-host
+service_instances:
+- endpoint
+fixture_profile: benign-reference

@@ -1,0 +1,5 @@
+schema_version: reference-kit-seed/v1
+kit: infrastructure.postgresql-database
+service_instances:
+- database
+fixture_profile: benign-reference

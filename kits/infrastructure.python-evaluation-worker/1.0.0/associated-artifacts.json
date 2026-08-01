@@ -1,0 +1,113 @@
+{
+  "schema_version": "associated-artifact-manifest/v1",
+  "manifest_id": "infrastructure.python-evaluation-worker-associated-artifacts",
+  "manifest_version": "1.0.0",
+  "canonicalization_profile": "associated-artifact-set/v1",
+  "scope": "scenario",
+  "parent_ref": {
+    "ref_kind": "scenario-snapshot",
+    "ref_id": "python-evaluation-worker",
+    "ref_version": null,
+    "ref_digest": "sha256:58b3e70945cdca53be83e71f86d835abb0a1a59f4dc82ba12eb2bf1ad6361484",
+    "ref_path": null
+  },
+  "artifacts": {
+    "kit-manifest": {
+      "artifact_id": "kit-manifest",
+      "role": "manifest",
+      "media_type": "application/yaml",
+      "uri": "raes-environment-kit:/kit.yaml",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "3592563475587e3a631e4d19ec75b05a9f94b836c79fe8b1476136cdb8f46405"
+      },
+      "size_bytes": 1470,
+      "created_at": "2026-08-01T00:00:00Z",
+      "source": "infrastructure.python-evaluation-worker@1.0.0",
+      "satisfies_refs": [],
+      "sensitivity": "public",
+      "description": null
+    },
+    "module": {
+      "artifact_id": "module",
+      "role": "configuration",
+      "media_type": "application/yaml",
+      "uri": "raes-environment-kit:/module.sdl.yaml",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "8a2f4e3945c741f44f87309872551d2047d1c0404b3bcba4f196a87c7f4ebcb5"
+      },
+      "size_bytes": 902,
+      "created_at": "2026-08-01T00:00:00Z",
+      "source": "infrastructure.python-evaluation-worker@1.0.0",
+      "satisfies_refs": [],
+      "sensitivity": "public",
+      "description": null
+    },
+    "readme": {
+      "artifact_id": "readme",
+      "role": "documentation",
+      "media_type": "text/markdown",
+      "uri": "raes-environment-kit:/README.md",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "b7931fdb2c65cde6d2fec314fe9989c6591e6e48f8c5fe20951f52975a907ba9"
+      },
+      "size_bytes": 255,
+      "created_at": "2026-08-01T00:00:00Z",
+      "source": "infrastructure.python-evaluation-worker@1.0.0",
+      "satisfies_refs": [],
+      "sensitivity": "public",
+      "description": null
+    },
+    "integration-material": {
+      "artifact_id": "integration-material",
+      "role": "operator-guide",
+      "media_type": "text/markdown",
+      "uri": "raes-environment-kit:/assets/integration.md",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "8bfa6580907604e7d809e2b0db70149fe46ca9ce016eefe4034e279394300416"
+      },
+      "size_bytes": 131,
+      "created_at": "2026-08-01T00:00:00Z",
+      "source": "infrastructure.python-evaluation-worker@1.0.0",
+      "satisfies_refs": [],
+      "sensitivity": "public",
+      "description": null
+    },
+    "seed-profile": {
+      "artifact_id": "seed-profile",
+      "role": "configuration",
+      "media_type": "application/yaml",
+      "uri": "raes-environment-kit:/assets/seed.yaml",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "1f4ff4e5c8c38ef06e67cabdf7801ceb5bae32a7b2968fe12d444047cbba914b"
+      },
+      "size_bytes": 145,
+      "created_at": "2026-08-01T00:00:00Z",
+      "source": "infrastructure.python-evaluation-worker@1.0.0",
+      "satisfies_refs": [],
+      "sensitivity": "public",
+      "description": null
+    },
+    "composition-tests": {
+      "artifact_id": "composition-tests",
+      "role": "configuration",
+      "media_type": "application/yaml",
+      "uri": "raes-environment-kit:/tests/composition.yaml",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "99c7557ad06bbeea4bcd4dddaec85799fdc5906c56e5619bb79551318e7fd6e5"
+      },
+      "size_bytes": 201,
+      "created_at": "2026-08-01T00:00:00Z",
+      "source": "infrastructure.python-evaluation-worker@1.0.0",
+      "satisfies_refs": [],
+      "sensitivity": "public",
+      "description": null
+    }
+  },
+  "set_digest": "sha256:730030eed6e64d1af184e4f36bf3d97db5d3abaa1ca69cc496a9b27e62a729d0"
+}

@@ -1,0 +1,5 @@
+schema_version: reference-kit-seed/v1
+kit: infrastructure.s3-compatible-object-store
+service_instances:
+- object_store
+fixture_profile: benign-reference

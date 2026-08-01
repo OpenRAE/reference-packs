@@ -1,0 +1,5 @@
+schema_version: reference-kit-seed/v1
+kit: infrastructure.isolated-python-analysis-sandbox
+service_instances:
+- sandbox
+fixture_profile: benign-reference

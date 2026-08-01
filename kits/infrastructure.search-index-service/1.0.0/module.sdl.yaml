@@ -1,0 +1,39 @@
+name: search-index-service
+version: 1.0.0
+description: Reusable static infrastructure for Search/index service.
+module:
+  id: infrastructure/search-index-service
+  version: 1.0.0
+  parameters:
+  - deployment_profile
+  - service_label
+  exports:
+    nodes:
+    - search
+  description: Composable Search/index service infrastructure module.
+variables:
+  deployment_profile:
+    type: string
+    default: standard
+    allowed_values:
+    - compact
+    - standard
+  service_label:
+    type: string
+    default: search-index-service
+nodes:
+  search:
+    type: vm
+    description: ${deployment_profile} profile for ${service_label} (Search/index
+      service).
+    source:
+      name: opensearch
+      version: '2'
+    resources:
+      cpu: 2
+      ram: 2 GiB
+    services:
+    - port: 9200
+      protocol: tcp
+      name: http
+      description: Declared http service surface.

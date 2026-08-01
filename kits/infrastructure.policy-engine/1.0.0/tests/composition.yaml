@@ -1,0 +1,7 @@
+default:
+  deployment_profile: standard
+  service_label: policy-engine
+variation:
+  deployment_profile: compact
+  service_label: policy-engine-alternate
+multi_kit_group: policy-operations

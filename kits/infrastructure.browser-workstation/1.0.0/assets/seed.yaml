@@ -1,0 +1,5 @@
+schema_version: reference-kit-seed/v1
+kit: infrastructure.browser-workstation
+service_instances:
+- workstation
+fixture_profile: benign-reference

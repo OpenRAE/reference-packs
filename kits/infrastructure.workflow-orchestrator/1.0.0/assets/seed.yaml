@@ -1,0 +1,5 @@
+schema_version: reference-kit-seed/v1
+kit: infrastructure.workflow-orchestrator
+service_instances:
+- orchestrator
+fixture_profile: benign-reference

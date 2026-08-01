@@ -1,0 +1,113 @@
+{
+  "schema_version": "associated-artifact-manifest/v1",
+  "manifest_id": "infrastructure.oidc-identity-provider-associated-artifacts",
+  "manifest_version": "1.0.0",
+  "canonicalization_profile": "associated-artifact-set/v1",
+  "scope": "scenario",
+  "parent_ref": {
+    "ref_kind": "scenario-snapshot",
+    "ref_id": "oidc-identity-provider",
+    "ref_version": null,
+    "ref_digest": "sha256:77b87d17a32cf5255fae777e8a047ad2076550e24696ed5d517eee230e57215a",
+    "ref_path": null
+  },
+  "artifacts": {
+    "kit-manifest": {
+      "artifact_id": "kit-manifest",
+      "role": "manifest",
+      "media_type": "application/yaml",
+      "uri": "raes-environment-kit:/kit.yaml",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "5c335074b6b48b2d9261d5788eb0fa3947c1cca64ed788b9478dc40dc75d0ef6"
+      },
+      "size_bytes": 1478,
+      "created_at": "2026-08-01T00:00:00Z",
+      "source": "infrastructure.oidc-identity-provider@1.0.0",
+      "satisfies_refs": [],
+      "sensitivity": "public",
+      "description": null
+    },
+    "module": {
+      "artifact_id": "module",
+      "role": "configuration",
+      "media_type": "application/yaml",
+      "uri": "raes-environment-kit:/module.sdl.yaml",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "e98014fd376070d5d3beb148a5b14833ed8a305c65e64b2e0d51ea5cc289b0ca"
+      },
+      "size_bytes": 1039,
+      "created_at": "2026-08-01T00:00:00Z",
+      "source": "infrastructure.oidc-identity-provider@1.0.0",
+      "satisfies_refs": [],
+      "sensitivity": "public",
+      "description": null
+    },
+    "readme": {
+      "artifact_id": "readme",
+      "role": "documentation",
+      "media_type": "text/markdown",
+      "uri": "raes-environment-kit:/README.md",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "dfcdf894e2507145e98eb8a96798f65bcd281b33fe8a8ca983e9a93ee6d271b4"
+      },
+      "size_bytes": 251,
+      "created_at": "2026-08-01T00:00:00Z",
+      "source": "infrastructure.oidc-identity-provider@1.0.0",
+      "satisfies_refs": [],
+      "sensitivity": "public",
+      "description": null
+    },
+    "integration-material": {
+      "artifact_id": "integration-material",
+      "role": "operator-guide",
+      "media_type": "text/markdown",
+      "uri": "raes-environment-kit:/assets/integration.md",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "23eda02e725e5651883842b2f052aa479950f6b8367d1567f8b2385595452ae7"
+      },
+      "size_bytes": 129,
+      "created_at": "2026-08-01T00:00:00Z",
+      "source": "infrastructure.oidc-identity-provider@1.0.0",
+      "satisfies_refs": [],
+      "sensitivity": "public",
+      "description": null
+    },
+    "seed-profile": {
+      "artifact_id": "seed-profile",
+      "role": "configuration",
+      "media_type": "application/yaml",
+      "uri": "raes-environment-kit:/assets/seed.yaml",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "a9659e98cbfb097e4a450515f58b6e020e5f7333b5b66d7b9b364cda82209937"
+      },
+      "size_bytes": 154,
+      "created_at": "2026-08-01T00:00:00Z",
+      "source": "infrastructure.oidc-identity-provider@1.0.0",
+      "satisfies_refs": [],
+      "sensitivity": "public",
+      "description": null
+    },
+    "composition-tests": {
+      "artifact_id": "composition-tests",
+      "role": "configuration",
+      "media_type": "application/yaml",
+      "uri": "raes-environment-kit:/tests/composition.yaml",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "39ed3cd43a51eab73626530364198c22ee70e51d69b123d99add121993fffe0a"
+      },
+      "size_bytes": 204,
+      "created_at": "2026-08-01T00:00:00Z",
+      "source": "infrastructure.oidc-identity-provider@1.0.0",
+      "satisfies_refs": [],
+      "sensitivity": "public",
+      "description": null
+    }
+  },
+  "set_digest": "sha256:241baf19836885d7be5c79a88a3d4ab24e3beedc52d619c1037aa7a46b3cee2e"
+}

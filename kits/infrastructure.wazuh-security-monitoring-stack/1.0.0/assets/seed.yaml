@@ -1,0 +1,7 @@
+schema_version: reference-kit-seed/v1
+kit: infrastructure.wazuh-security-monitoring-stack
+service_instances:
+- manager
+- indexer
+- dashboard
+fixture_profile: benign-reference

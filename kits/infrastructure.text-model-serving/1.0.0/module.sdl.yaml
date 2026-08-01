@@ -1,0 +1,38 @@
+name: text-model-serving
+version: 1.0.0
+description: Reusable static infrastructure for Text-model serving.
+module:
+  id: infrastructure/text-model-serving
+  version: 1.0.0
+  parameters:
+  - deployment_profile
+  - service_label
+  exports:
+    nodes:
+    - model_server
+  description: Composable Text-model serving infrastructure module.
+variables:
+  deployment_profile:
+    type: string
+    default: standard
+    allowed_values:
+    - compact
+    - standard
+  service_label:
+    type: string
+    default: text-model-serving
+nodes:
+  model_server:
+    type: vm
+    description: ${deployment_profile} profile for ${service_label} (Text-model serving).
+    source:
+      name: vllm
+      version: stable
+    resources:
+      cpu: 2
+      ram: 2 GiB
+    services:
+    - port: 8000
+      protocol: tcp
+      name: http
+      description: Declared http service surface.

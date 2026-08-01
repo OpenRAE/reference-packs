@@ -1,0 +1,5 @@
+schema_version: reference-kit-seed/v1
+kit: infrastructure.smb-file-service
+service_instances:
+- file_service
+fixture_profile: benign-reference

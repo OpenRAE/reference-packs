@@ -1,0 +1,7 @@
+default:
+  deployment_profile: standard
+  service_label: rdp-accessible-windows-host
+variation:
+  deployment_profile: compact
+  service_label: rdp-accessible-windows-host-alternate
+multi_kit_group: access-workstation

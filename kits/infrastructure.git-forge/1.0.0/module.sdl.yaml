@@ -1,0 +1,42 @@
+name: git-forge
+version: 1.0.0
+description: Reusable static infrastructure for Git forge.
+module:
+  id: infrastructure/git-forge
+  version: 1.0.0
+  parameters:
+  - deployment_profile
+  - service_label
+  exports:
+    nodes:
+    - forge
+  description: Composable Git forge infrastructure module.
+variables:
+  deployment_profile:
+    type: string
+    default: standard
+    allowed_values:
+    - compact
+    - standard
+  service_label:
+    type: string
+    default: git-forge
+nodes:
+  forge:
+    type: vm
+    description: ${deployment_profile} profile for ${service_label} (Git forge).
+    source:
+      name: gitea
+      version: '1'
+    resources:
+      cpu: 2
+      ram: 2 GiB
+    services:
+    - port: 22
+      protocol: tcp
+      name: ssh
+      description: Declared ssh service surface.
+    - port: 3000
+      protocol: tcp
+      name: http
+      description: Declared http service surface.

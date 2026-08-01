@@ -1,0 +1,39 @@
+name: python-evaluation-worker
+version: 1.0.0
+description: Reusable static infrastructure for Python evaluation worker.
+module:
+  id: infrastructure/python-evaluation-worker
+  version: 1.0.0
+  parameters:
+  - deployment_profile
+  - service_label
+  exports:
+    nodes:
+    - worker
+  description: Composable Python evaluation worker infrastructure module.
+variables:
+  deployment_profile:
+    type: string
+    default: standard
+    allowed_values:
+    - compact
+    - standard
+  service_label:
+    type: string
+    default: python-evaluation-worker
+nodes:
+  worker:
+    type: vm
+    description: ${deployment_profile} profile for ${service_label} (Python evaluation
+      worker).
+    source:
+      name: python
+      version: '3.12'
+    resources:
+      cpu: 2
+      ram: 2 GiB
+    services:
+    - port: 8000
+      protocol: tcp
+      name: control
+      description: Declared control service surface.

@@ -1,0 +1,43 @@
+name: s3-compatible-object-store
+version: 1.0.0
+description: Reusable static infrastructure for S3-compatible object store.
+module:
+  id: infrastructure/s3-compatible-object-store
+  version: 1.0.0
+  parameters:
+  - deployment_profile
+  - service_label
+  exports:
+    nodes:
+    - object_store
+  description: Composable S3-compatible object store infrastructure module.
+variables:
+  deployment_profile:
+    type: string
+    default: standard
+    allowed_values:
+    - compact
+    - standard
+  service_label:
+    type: string
+    default: s3-compatible-object-store
+nodes:
+  object_store:
+    type: vm
+    description: ${deployment_profile} profile for ${service_label} (S3-compatible
+      object store).
+    source:
+      name: minio
+      version: stable
+    resources:
+      cpu: 2
+      ram: 2 GiB
+    services:
+    - port: 9000
+      protocol: tcp
+      name: s3
+      description: Declared s3 service surface.
+    - port: 9001
+      protocol: tcp
+      name: console
+      description: Declared console service surface.

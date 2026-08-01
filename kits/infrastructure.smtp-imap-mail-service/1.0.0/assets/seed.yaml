@@ -1,0 +1,5 @@
+schema_version: reference-kit-seed/v1
+kit: infrastructure.smtp-imap-mail-service
+service_instances:
+- mail
+fixture_profile: benign-reference

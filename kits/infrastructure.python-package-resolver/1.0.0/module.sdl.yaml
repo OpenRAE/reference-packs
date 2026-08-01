@@ -1,0 +1,39 @@
+name: python-package-resolver
+version: 1.0.0
+description: Reusable static infrastructure for Python package resolver.
+module:
+  id: infrastructure/python-package-resolver
+  version: 1.0.0
+  parameters:
+  - deployment_profile
+  - service_label
+  exports:
+    nodes:
+    - resolver
+  description: Composable Python package resolver infrastructure module.
+variables:
+  deployment_profile:
+    type: string
+    default: standard
+    allowed_values:
+    - compact
+    - standard
+  service_label:
+    type: string
+    default: python-package-resolver
+nodes:
+  resolver:
+    type: vm
+    description: ${deployment_profile} profile for ${service_label} (Python package
+      resolver).
+    source:
+      name: devpi
+      version: '6'
+    resources:
+      cpu: 2
+      ram: 2 GiB
+    services:
+    - port: 3141
+      protocol: tcp
+      name: http
+      description: Declared http service surface.

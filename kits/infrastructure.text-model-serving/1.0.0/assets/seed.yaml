@@ -1,0 +1,5 @@
+schema_version: reference-kit-seed/v1
+kit: infrastructure.text-model-serving
+service_instances:
+- model_server
+fixture_profile: benign-reference

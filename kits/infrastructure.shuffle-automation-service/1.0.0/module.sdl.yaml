@@ -1,0 +1,55 @@
+name: shuffle-automation-service
+version: 1.0.0
+description: Reusable static infrastructure for Shuffle automation service.
+module:
+  id: infrastructure/shuffle-automation-service
+  version: 1.0.0
+  parameters:
+  - deployment_profile
+  - service_label
+  exports:
+    nodes:
+    - automation
+    - storage
+  description: Composable Shuffle automation service infrastructure module.
+variables:
+  deployment_profile:
+    type: string
+    default: standard
+    allowed_values:
+    - compact
+    - standard
+  service_label:
+    type: string
+    default: shuffle-automation-service
+nodes:
+  automation:
+    type: vm
+    description: ${deployment_profile} profile for ${service_label} (Shuffle automation
+      service).
+    source:
+      name: shuffle
+      version: '2'
+    resources:
+      cpu: 2
+      ram: 2 GiB
+    services:
+    - port: 3001
+      protocol: tcp
+      name: http
+      description: Declared http service surface.
+  storage:
+    type: vm
+    description: ${deployment_profile} profile for ${service_label} (Shuffle automation
+      service).
+    source:
+      name: opensearch
+      version: '2'
+    resources:
+      cpu: 2
+      ram: 2 GiB
+    services:
+    - port: 9200
+      protocol: tcp
+      name: http
+      description: Declared http service surface.

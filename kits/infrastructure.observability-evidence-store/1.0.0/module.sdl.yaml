@@ -1,0 +1,55 @@
+name: observability-evidence-store
+version: 1.0.0
+description: Reusable static infrastructure for Observability/evidence store.
+module:
+  id: infrastructure/observability-evidence-store
+  version: 1.0.0
+  parameters:
+  - deployment_profile
+  - service_label
+  exports:
+    nodes:
+    - metrics
+    - traces
+  description: Composable Observability/evidence store infrastructure module.
+variables:
+  deployment_profile:
+    type: string
+    default: standard
+    allowed_values:
+    - compact
+    - standard
+  service_label:
+    type: string
+    default: observability-evidence-store
+nodes:
+  metrics:
+    type: vm
+    description: ${deployment_profile} profile for ${service_label} (Observability/evidence
+      store).
+    source:
+      name: grafana
+      version: stable
+    resources:
+      cpu: 2
+      ram: 2 GiB
+    services:
+    - port: 3000
+      protocol: tcp
+      name: http
+      description: Declared http service surface.
+  traces:
+    type: vm
+    description: ${deployment_profile} profile for ${service_label} (Observability/evidence
+      store).
+    source:
+      name: tempo
+      version: stable
+    resources:
+      cpu: 2
+      ram: 2 GiB
+    services:
+    - port: 3200
+      protocol: tcp
+      name: http
+      description: Declared http service surface.

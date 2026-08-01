@@ -1,0 +1,42 @@
+name: static-web-service
+version: 1.0.0
+description: Reusable static infrastructure for Static web service.
+module:
+  id: infrastructure/static-web-service
+  version: 1.0.0
+  parameters:
+  - deployment_profile
+  - service_label
+  exports:
+    nodes:
+    - web
+  description: Composable Static web service infrastructure module.
+variables:
+  deployment_profile:
+    type: string
+    default: standard
+    allowed_values:
+    - compact
+    - standard
+  service_label:
+    type: string
+    default: static-web-service
+nodes:
+  web:
+    type: vm
+    description: ${deployment_profile} profile for ${service_label} (Static web service).
+    source:
+      name: nginx
+      version: stable
+    resources:
+      cpu: 2
+      ram: 2 GiB
+    services:
+    - port: 80
+      protocol: tcp
+      name: http
+      description: Declared http service surface.
+    - port: 443
+      protocol: tcp
+      name: https
+      description: Declared https service surface.

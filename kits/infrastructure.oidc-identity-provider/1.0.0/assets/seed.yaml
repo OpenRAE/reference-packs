@@ -1,0 +1,5 @@
+schema_version: reference-kit-seed/v1
+kit: infrastructure.oidc-identity-provider
+service_instances:
+- identity_provider
+fixture_profile: benign-reference

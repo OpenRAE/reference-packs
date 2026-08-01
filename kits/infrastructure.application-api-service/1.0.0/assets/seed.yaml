@@ -1,0 +1,5 @@
+schema_version: reference-kit-seed/v1
+kit: infrastructure.application-api-service
+service_instances:
+- application
+fixture_profile: benign-reference
