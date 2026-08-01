@@ -1,13 +1,14 @@
 name: samba-active-directory-domain-controller
 version: 1.0.0
 description: Reusable static infrastructure for Samba Active Directory-compatible
-  domain controller.
+  domain controller. Configures domain_name through the kit parameter contract.
 module:
   id: infrastructure/samba-active-directory-domain-controller
   version: 1.0.0
   parameters:
   - deployment_profile
   - service_label
+  - domain_name
   exports:
     nodes:
     - domain_controller
@@ -19,6 +20,8 @@ module:
     - forest
     relationships:
     - directory_controller
+    content:
+    - seed_inventory
   description: Composable Samba Active Directory-compatible domain controller infrastructure
     module.
 variables:
@@ -31,11 +34,14 @@ variables:
   service_label:
     type: string
     default: samba-active-directory-domain-controller
+  domain_name:
+    type: string
+    default: directory.example.test
 nodes:
   domain_controller:
     type: vm
-    description: ${deployment_profile} profile for ${service_label} (Samba Active
-      Directory-compatible domain controller).
+    description: '${deployment_profile} profile for ${service_label} (Samba Active
+      Directory-compatible domain controller). Configuration: ${domain_name}.'
     source:
       name: samba
       version: '4'
@@ -68,7 +74,7 @@ accounts:
 identity_domains:
   directory:
     profile: active_directory
-    dns_name: directory.example.test
+    dns_name: ${domain_name}
     netbios_name: DIRECTORY
     authority_account_ref: directory_administrator
 identity_forests:
@@ -82,3 +88,33 @@ relationships:
     source: domain_controller
     target: directory
     domain_controller: {}
+content:
+  seed_inventory:
+    type: dataset
+    target: domain_controller
+    description: Benign infrastructure seed inventory for ${domain_name}.
+    items:
+    - name: organizational_units
+      display_name: Organizational Units
+      tags:
+      - infrastructure
+      - seed
+      description: Declared organizational units for this reusable service.
+    - name: directory_groups
+      display_name: Directory Groups
+      tags:
+      - infrastructure
+      - seed
+      description: Declared directory groups for this reusable service.
+    - name: dns_zone
+      display_name: Dns Zone
+      tags:
+      - infrastructure
+      - seed
+      description: Declared dns zone for this reusable service.
+    - name: administrator_identity
+      display_name: Administrator Identity
+      tags:
+      - infrastructure
+      - seed
+      description: Declared administrator identity for this reusable service.

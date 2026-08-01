@@ -1,5 +1,25 @@
-schema_version: reference-kit-seed/v1
+schema_version: environment-kit-seed/v1
 kit: infrastructure.postgresql-database
-service_instances:
-- database
-fixture_profile: benign-reference
+configuration:
+  database_name: environment
+  deployment_profile: standard
+  service_label: postgresql-database
+declared_objects:
+- id: database
+  kind: infrastructure-seed
+  sensitivity: non-secret
+- id: schemas
+  kind: infrastructure-seed
+  sensitivity: non-secret
+- id: tables
+  kind: infrastructure-seed
+  sensitivity: non-secret
+- id: roles
+  kind: infrastructure-seed
+  sensitivity: non-secret
+- id: seed_rows
+  kind: infrastructure-seed
+  sensitivity: non-secret
+integration_requirements:
+- No mandatory external authoring prerequisite; connect exported surfaces at the pack
+  composition root as needed.

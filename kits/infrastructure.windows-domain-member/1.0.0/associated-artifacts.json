@@ -8,42 +8,10 @@
     "ref_kind": "scenario-snapshot",
     "ref_id": "windows-domain-member",
     "ref_version": null,
-    "ref_digest": "sha256:3f188af0b6d929d4daa84a37918cc546f2e197dcdc98a0baaa7c813f3ecaddec",
+    "ref_digest": "sha256:13bb7404f42f8c54974cb2f0377176dcee01bc3ea9b16703e7dcb5eee164942a",
     "ref_path": null
   },
   "artifacts": {
-    "kit-manifest": {
-      "artifact_id": "kit-manifest",
-      "role": "manifest",
-      "media_type": "application/yaml",
-      "uri": "raes-environment-kit:/kit.yaml",
-      "checksum": {
-        "algorithm": "sha256",
-        "value": "a35b8c0fd08fd8b8d6530639a0dee882d42ab7958341dd482be19b8183746f1e"
-      },
-      "size_bytes": 1477,
-      "created_at": "2026-08-01T00:00:00Z",
-      "source": "infrastructure.windows-domain-member@1.0.0",
-      "satisfies_refs": [],
-      "sensitivity": "public",
-      "description": null
-    },
-    "module": {
-      "artifact_id": "module",
-      "role": "configuration",
-      "media_type": "application/yaml",
-      "uri": "raes-environment-kit:/module.sdl.yaml",
-      "checksum": {
-        "algorithm": "sha256",
-        "value": "0bee91a25532d7212267955b266ad609f5da0fe2be575a5d5cc3e4f1cf6758c2"
-      },
-      "size_bytes": 898,
-      "created_at": "2026-08-01T00:00:00Z",
-      "source": "infrastructure.windows-domain-member@1.0.0",
-      "satisfies_refs": [],
-      "sensitivity": "public",
-      "description": null
-    },
     "readme": {
       "artifact_id": "readme",
       "role": "documentation",
@@ -51,9 +19,9 @@
       "uri": "raes-environment-kit:/README.md",
       "checksum": {
         "algorithm": "sha256",
-        "value": "970d80e4123fd3c5270fbec090f97b5926de33a4a8eb8496a3be8b92cf834211"
+        "value": "a2e7ba52d49a55e53a8b0daf96254639161a615030d956a7a8d55a14dcff6c92"
       },
-      "size_bytes": 249,
+      "size_bytes": 475,
       "created_at": "2026-08-01T00:00:00Z",
       "source": "infrastructure.windows-domain-member@1.0.0",
       "satisfies_refs": [],
@@ -67,9 +35,9 @@
       "uri": "raes-environment-kit:/assets/integration.md",
       "checksum": {
         "algorithm": "sha256",
-        "value": "0b24acb4a93cd1f94ac15c25773e176266eccd6d3c56759dfe76e25fa1b502cd"
+        "value": "f010be9428ac67cc65c2cf6e4bfa591e8280cee78fcf3c70ddc88d69c5222d93"
       },
-      "size_bytes": 128,
+      "size_bytes": 508,
       "created_at": "2026-08-01T00:00:00Z",
       "source": "infrastructure.windows-domain-member@1.0.0",
       "satisfies_refs": [],
@@ -83,9 +51,41 @@
       "uri": "raes-environment-kit:/assets/seed.yaml",
       "checksum": {
         "algorithm": "sha256",
-        "value": "6a39c0a081efa96e89358d0a424b84289f590b58ea8ed2fff0e919d3b965e278"
+        "value": "4884d755efe28c9f32b676a4a669053336900e159e66c83a40061573a21dc0c9"
       },
-      "size_bytes": 149,
+      "size_bytes": 574,
+      "created_at": "2026-08-01T00:00:00Z",
+      "source": "infrastructure.windows-domain-member@1.0.0",
+      "satisfies_refs": [],
+      "sensitivity": "public",
+      "description": null
+    },
+    "kit-manifest": {
+      "artifact_id": "kit-manifest",
+      "role": "manifest",
+      "media_type": "application/yaml",
+      "uri": "raes-environment-kit:/kit.yaml",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "edd6632a91dea8296db224f7c269b111948ed518d1eb55b73d2bb9c52640ec23"
+      },
+      "size_bytes": 1843,
+      "created_at": "2026-08-01T00:00:00Z",
+      "source": "infrastructure.windows-domain-member@1.0.0",
+      "satisfies_refs": [],
+      "sensitivity": "public",
+      "description": null
+    },
+    "module": {
+      "artifact_id": "module",
+      "role": "configuration",
+      "media_type": "application/yaml",
+      "uri": "raes-environment-kit:/module.sdl.yaml",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "0d1b9b4c4be719bf49aee8d0d9cf561a1797cd88b28ccfd4996b4f7f72307a8e"
+      },
+      "size_bytes": 2067,
       "created_at": "2026-08-01T00:00:00Z",
       "source": "infrastructure.windows-domain-member@1.0.0",
       "satisfies_refs": [],
@@ -99,9 +99,9 @@
       "uri": "raes-environment-kit:/tests/composition.yaml",
       "checksum": {
         "algorithm": "sha256",
-        "value": "396e1ee3808ce9b03bed9618c224250a7071b613403036b6755280ed8bed11f4"
+        "value": "2b6f2743fbcfc701a68c4f97e74fba1eeb87367762a22a77fefa41963bddb9bd"
       },
-      "size_bytes": 202,
+      "size_bytes": 264,
       "created_at": "2026-08-01T00:00:00Z",
       "source": "infrastructure.windows-domain-member@1.0.0",
       "satisfies_refs": [],
@@ -109,5 +109,5 @@
       "description": null
     }
   },
-  "set_digest": "sha256:83c51ecb6e93bc52dfe38797a12b3475a83a7d762b7e2e1673640597c2c12fae"
+  "set_digest": "sha256:0e34481dae7bdb49cd328821b4b4ae95bbb60552c9c377d451e34b9e69f31df3"
 }

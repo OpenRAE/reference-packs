@@ -8,42 +8,10 @@
     "ref_kind": "scenario-snapshot",
     "ref_id": "workflow-orchestrator",
     "ref_version": null,
-    "ref_digest": "sha256:2a17cf6f86f669a34121c6ebdaf794b65fdd9bf4414bf30923d6674ce945667c",
+    "ref_digest": "sha256:787be891b292a95ebf8c15bb5af792ff451be9e805c3a50c38be93d055111f9a",
     "ref_path": null
   },
   "artifacts": {
-    "kit-manifest": {
-      "artifact_id": "kit-manifest",
-      "role": "manifest",
-      "media_type": "application/yaml",
-      "uri": "raes-environment-kit:/kit.yaml",
-      "checksum": {
-        "algorithm": "sha256",
-        "value": "b073daac4a6778a361739885fb268d12d548eb040d86e2c037dbc7672793701b"
-      },
-      "size_bytes": 1464,
-      "created_at": "2026-08-01T00:00:00Z",
-      "source": "infrastructure.workflow-orchestrator@1.0.0",
-      "satisfies_refs": [],
-      "sensitivity": "public",
-      "description": null
-    },
-    "module": {
-      "artifact_id": "module",
-      "role": "configuration",
-      "media_type": "application/yaml",
-      "uri": "raes-environment-kit:/module.sdl.yaml",
-      "checksum": {
-        "algorithm": "sha256",
-        "value": "3c6d4f36ffb5398706b17eee8ee1532c4c21c2a9e77a7c0e4d4ce6b740b50b15"
-      },
-      "size_bytes": 882,
-      "created_at": "2026-08-01T00:00:00Z",
-      "source": "infrastructure.workflow-orchestrator@1.0.0",
-      "satisfies_refs": [],
-      "sensitivity": "public",
-      "description": null
-    },
     "readme": {
       "artifact_id": "readme",
       "role": "documentation",
@@ -51,9 +19,9 @@
       "uri": "raes-environment-kit:/README.md",
       "checksum": {
         "algorithm": "sha256",
-        "value": "3694590c39608135337ce25bd750697c862a2c2af67f652f759c3b9768a4dc63"
+        "value": "977efff692f4534d426efc02060779d3552cb632c571c871991b870fc609c84f"
       },
-      "size_bytes": 249,
+      "size_bytes": 475,
       "created_at": "2026-08-01T00:00:00Z",
       "source": "infrastructure.workflow-orchestrator@1.0.0",
       "satisfies_refs": [],
@@ -67,9 +35,9 @@
       "uri": "raes-environment-kit:/assets/integration.md",
       "checksum": {
         "algorithm": "sha256",
-        "value": "77b61c4d3f3338fe7818bc849383f12b8b40d89a4ed7dfd6d1276538422626d4"
+        "value": "e387128eaa9e340edd04e050fabe7a36773c57652ec49863378788a7d0d53231"
       },
-      "size_bytes": 128,
+      "size_bytes": 524,
       "created_at": "2026-08-01T00:00:00Z",
       "source": "infrastructure.workflow-orchestrator@1.0.0",
       "satisfies_refs": [],
@@ -83,9 +51,41 @@
       "uri": "raes-environment-kit:/assets/seed.yaml",
       "checksum": {
         "algorithm": "sha256",
-        "value": "137a62745f84fe23bd3a1a057b90ed46fb2bc90598296b81708f3e5eab72a3e6"
+        "value": "c748680fe49892c5c687d3262dc0c44e54e318d2e46f2ee5fb4ef21fb099925b"
       },
-      "size_bytes": 148,
+      "size_bytes": 638,
+      "created_at": "2026-08-01T00:00:00Z",
+      "source": "infrastructure.workflow-orchestrator@1.0.0",
+      "satisfies_refs": [],
+      "sensitivity": "public",
+      "description": null
+    },
+    "kit-manifest": {
+      "artifact_id": "kit-manifest",
+      "role": "manifest",
+      "media_type": "application/yaml",
+      "uri": "raes-environment-kit:/kit.yaml",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "d6ed6972bcbd2173eef95a77176813c2609c3fdc4d844e1146dc9b0d87f0426c"
+      },
+      "size_bytes": 1671,
+      "created_at": "2026-08-01T00:00:00Z",
+      "source": "infrastructure.workflow-orchestrator@1.0.0",
+      "satisfies_refs": [],
+      "sensitivity": "public",
+      "description": null
+    },
+    "module": {
+      "artifact_id": "module",
+      "role": "configuration",
+      "media_type": "application/yaml",
+      "uri": "raes-environment-kit:/module.sdl.yaml",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "97d8542c9b0b0c5b8272c90269679d39c9d972bc488d4c11c2b9a20db72a3d4b"
+      },
+      "size_bytes": 2706,
       "created_at": "2026-08-01T00:00:00Z",
       "source": "infrastructure.workflow-orchestrator@1.0.0",
       "satisfies_refs": [],
@@ -99,9 +99,9 @@
       "uri": "raes-environment-kit:/tests/composition.yaml",
       "checksum": {
         "algorithm": "sha256",
-        "value": "f8876036cb9fe28ec28bdf077217990970dd0519183826c97121ef3f61e8d0b7"
+        "value": "99c53ad051a427dcd5b09efe24e2ca17327e2cf6fab6b0f61bbb0ac37bb983e7"
       },
-      "size_bytes": 200,
+      "size_bytes": 258,
       "created_at": "2026-08-01T00:00:00Z",
       "source": "infrastructure.workflow-orchestrator@1.0.0",
       "satisfies_refs": [],
@@ -109,5 +109,5 @@
       "description": null
     }
   },
-  "set_digest": "sha256:4149e46ba351ad8f4c5edeffe101e9aff6df208b2655344b05ff86d03ffaa922"
+  "set_digest": "sha256:0bc901fd51609166d7960eea05221c9832484457de3bec4b0d0c4209bcbb0129"
 }

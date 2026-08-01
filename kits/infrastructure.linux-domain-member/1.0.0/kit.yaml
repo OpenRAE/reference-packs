@@ -2,8 +2,8 @@ schema_version: environment-pack-kit/v1
 id: infrastructure.linux-domain-member
 version: 1.0.0
 title: Linux domain member
-summary: Reusable linux domain member infrastructure with configurable profile and
-  service identity.
+summary: Reusable linux domain member with domain-specific configuration, declared
+  service surfaces, seeded objects, and pack-local integration material.
 concern: identity-domain
 released_at: '2026-08-01T00:00:00Z'
 module:
@@ -22,10 +22,18 @@ resources:
   memory_mib: 2048
   storage_mib: 4096
   notes: Planning estimates only; realization sizing remains backend-owned.
-prerequisites: []
+prerequisites:
+- kind: external
+  id: directory-authority
+  version: raes-3.2
+  description: Compose with one exported RAES identity domain and add the pack-level
+    domain-join relationship.
 limitations:
-- Declares static infrastructure and integration surfaces only.
-- Does not claim launch, readiness, traffic attachment, or runtime evidence.
+- Declares static infrastructure, seeded state, and integration surfaces only.
+- Does not claim launch, readiness, traffic attachment, credential delivery, or runtime
+  evidence.
+- Compose with one exported RAES identity domain and add the pack-level domain-join
+  relationship.
 license:
   expression: MIT
   redistribution: open

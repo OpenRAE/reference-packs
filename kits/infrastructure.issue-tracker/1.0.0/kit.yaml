@@ -2,8 +2,8 @@ schema_version: environment-pack-kit/v1
 id: infrastructure.issue-tracker
 version: 1.0.0
 title: Issue tracker
-summary: Reusable issue tracker infrastructure with configurable profile and service
-  identity.
+summary: Reusable issue tracker with domain-specific configuration, declared service
+  surfaces, seeded objects, and pack-local integration material.
 concern: collaboration-developer
 released_at: '2026-08-01T00:00:00Z'
 module:
@@ -24,8 +24,11 @@ resources:
   notes: Planning estimates only; realization sizing remains backend-owned.
 prerequisites: []
 limitations:
-- Declares static infrastructure and integration surfaces only.
-- Does not claim launch, readiness, traffic attachment, or runtime evidence.
+- Declares static infrastructure, seeded state, and integration surfaces only.
+- Does not claim launch, readiness, traffic attachment, credential delivery, or runtime
+  evidence.
+- No mandatory external authoring prerequisite; connect exported surfaces at the pack
+  composition root as needed.
 license:
   expression: MIT
   redistribution: open

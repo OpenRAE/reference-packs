@@ -2,8 +2,8 @@ schema_version: environment-pack-kit/v1
 id: infrastructure.webmail-service
 version: 1.0.0
 title: Webmail service
-summary: Reusable webmail service infrastructure with configurable profile and service
-  identity.
+summary: Reusable webmail service with domain-specific configuration, declared service
+  surfaces, seeded objects, and pack-local integration material.
 concern: network-shared
 released_at: '2026-08-01T00:00:00Z'
 module:
@@ -22,10 +22,16 @@ resources:
   memory_mib: 2048
   storage_mib: 4096
   notes: Planning estimates only; realization sizing remains backend-owned.
-prerequisites: []
+prerequisites:
+- kind: external
+  id: mail-service
+  version: raes-3.2
+  description: Bind the browser client to an imported SMTP/IMAP service.
 limitations:
-- Declares static infrastructure and integration surfaces only.
-- Does not claim launch, readiness, traffic attachment, or runtime evidence.
+- Declares static infrastructure, seeded state, and integration surfaces only.
+- Does not claim launch, readiness, traffic attachment, credential delivery, or runtime
+  evidence.
+- Bind the browser client to an imported SMTP/IMAP service.
 license:
   expression: MIT
   redistribution: open

@@ -23,7 +23,27 @@ class CatalogTests(unittest.TestCase):
     def test_every_release_composes_with_two_parameter_sets(self):
         for manifest in sorted(ROOT.glob("kits/*/1.0.0/kit.yaml")):
             release = load_kit_release(manifest.parent)
+            module = yaml.safe_load((manifest.parent / "module.sdl.yaml").read_text())
             cases = yaml.safe_load((manifest.parent / "tests/composition.yaml").read_text())
+            domain_parameters = set(module["module"]["parameters"]) - {
+                "deployment_profile",
+                "service_label",
+            }
+            self.assertGreaterEqual(len(domain_parameters), 1, release.id)
+            self.assertIn("seed_inventory", module["module"]["exports"]["content"])
+            self.assertGreaterEqual(
+                len(module["content"]["seed_inventory"]["items"]),
+                3,
+                release.id,
+            )
+            self.assertTrue(
+                any(
+                    cases["default"].get(parameter)
+                    != cases["variation"].get(parameter)
+                    for parameter in domain_parameters
+                ),
+                release.id,
+            )
             for name in ("default", "variation"):
                 with self.subTest(kit=release.id, case=name), tempfile.TemporaryDirectory() as tmp:
                     root = Path(tmp)
@@ -31,6 +51,22 @@ class CatalogTests(unittest.TestCase):
                     document = {"name": "composition", "imports": [{"source": "local:module.sdl.yaml", "namespace": "subject", "version": "1.0.0", "parameters": cases[name]}]}
                     (root / "scenario.sdl.yaml").write_text(yaml.safe_dump(document, sort_keys=False))
                     parse_sdl_file(root / "scenario.sdl.yaml")
+
+    def test_every_release_has_substantive_authoring_material(self):
+        for manifest in sorted(ROOT.glob("kits/*/1.0.0/kit.yaml")):
+            release = load_kit_release(manifest.parent)
+            readme = (manifest.parent / "README.md").read_text(encoding="utf-8")
+            integration = (manifest.parent / "assets/integration.md").read_text(
+                encoding="utf-8"
+            )
+            seed = yaml.safe_load(
+                (manifest.parent / "assets/seed.yaml").read_text(encoding="utf-8")
+            )
+            self.assertIn("authoring content", readme.lower(), release.id)
+            self.assertIn("## Exported RAES declarations", integration, release.id)
+            self.assertIn("## Composition notes", integration, release.id)
+            self.assertGreaterEqual(len(seed["declared_objects"]), 3, release.id)
+            self.assertTrue(seed["integration_requirements"], release.id)
 
     def test_representative_multi_kit_environment_composes(self):
         selected = [

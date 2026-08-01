@@ -8,42 +8,10 @@
     "ref_kind": "scenario-snapshot",
     "ref_id": "text-model-serving",
     "ref_version": null,
-    "ref_digest": "sha256:cd20d47170f35ffc0ca7af8cb3ffeead2b82f391371a53299c844680ce800309",
+    "ref_digest": "sha256:d0ebff980f818b9894c2969a756a457908382fd448fc3b2036a0453cbfc17f4f",
     "ref_path": null
   },
   "artifacts": {
-    "kit-manifest": {
-      "artifact_id": "kit-manifest",
-      "role": "manifest",
-      "media_type": "application/yaml",
-      "uri": "raes-environment-kit:/kit.yaml",
-      "checksum": {
-        "algorithm": "sha256",
-        "value": "63d204ec632a3ece6e5e06aa461514b8275bd75a9a0981f72f894f1e6fa50b4a"
-      },
-      "size_bytes": 1446,
-      "created_at": "2026-08-01T00:00:00Z",
-      "source": "infrastructure.text-model-serving@1.0.0",
-      "satisfies_refs": [],
-      "sensitivity": "public",
-      "description": null
-    },
-    "module": {
-      "artifact_id": "module",
-      "role": "configuration",
-      "media_type": "application/yaml",
-      "uri": "raes-environment-kit:/module.sdl.yaml",
-      "checksum": {
-        "algorithm": "sha256",
-        "value": "da8785d03cf0dc0c041bd6d7e8f1fcae8bc4938cdf0d97d834b259dbfdd4c114"
-      },
-      "size_bytes": 864,
-      "created_at": "2026-08-01T00:00:00Z",
-      "source": "infrastructure.text-model-serving@1.0.0",
-      "satisfies_refs": [],
-      "sensitivity": "public",
-      "description": null
-    },
     "readme": {
       "artifact_id": "readme",
       "role": "documentation",
@@ -51,9 +19,9 @@
       "uri": "raes-environment-kit:/README.md",
       "checksum": {
         "algorithm": "sha256",
-        "value": "d3c5ed95f06929f13d8b28d3fb3a0270866a779e7789390b59b8cb01269b209f"
+        "value": "5bddf9c80b758427358dfebde89b337ec605da7aa3fb8f0037b86d7084e5f96a"
       },
-      "size_bytes": 243,
+      "size_bytes": 469,
       "created_at": "2026-08-01T00:00:00Z",
       "source": "infrastructure.text-model-serving@1.0.0",
       "satisfies_refs": [],
@@ -67,9 +35,9 @@
       "uri": "raes-environment-kit:/assets/integration.md",
       "checksum": {
         "algorithm": "sha256",
-        "value": "091b949731c9c51c753948420d12a94ff41dd8a73c128a2856cc6fbd3d368d3f"
+        "value": "8eaabf882f0a66430a9ed9c0596fc4ed9c8114ba341f06f5fcf715ec944cd945"
       },
-      "size_bytes": 125,
+      "size_bytes": 513,
       "created_at": "2026-08-01T00:00:00Z",
       "source": "infrastructure.text-model-serving@1.0.0",
       "satisfies_refs": [],
@@ -83,9 +51,41 @@
       "uri": "raes-environment-kit:/assets/seed.yaml",
       "checksum": {
         "algorithm": "sha256",
-        "value": "b7f4cc111ec2e9cd4d0498dc6a3989e3d902b5405bbfba1f6b17d194937671e9"
+        "value": "1c6381afced8a68893e3c74425ec2261b741162dfb291bddc8a35cf42d3feeed"
       },
-      "size_bytes": 145,
+      "size_bytes": 646,
+      "created_at": "2026-08-01T00:00:00Z",
+      "source": "infrastructure.text-model-serving@1.0.0",
+      "satisfies_refs": [],
+      "sensitivity": "public",
+      "description": null
+    },
+    "kit-manifest": {
+      "artifact_id": "kit-manifest",
+      "role": "manifest",
+      "media_type": "application/yaml",
+      "uri": "raes-environment-kit:/kit.yaml",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "6b57857eb77d3ac880d2da5a56d9424ee234f49949213e17c63cb1324c88af17"
+      },
+      "size_bytes": 1653,
+      "created_at": "2026-08-01T00:00:00Z",
+      "source": "infrastructure.text-model-serving@1.0.0",
+      "satisfies_refs": [],
+      "sensitivity": "public",
+      "description": null
+    },
+    "module": {
+      "artifact_id": "module",
+      "role": "configuration",
+      "media_type": "application/yaml",
+      "uri": "raes-environment-kit:/module.sdl.yaml",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "5c9f31d33888b625cdbe26a86921b5507f04ba8e8c29122edb402f963d81f5b3"
+      },
+      "size_bytes": 2719,
       "created_at": "2026-08-01T00:00:00Z",
       "source": "infrastructure.text-model-serving@1.0.0",
       "satisfies_refs": [],
@@ -99,9 +99,9 @@
       "uri": "raes-environment-kit:/tests/composition.yaml",
       "checksum": {
         "algorithm": "sha256",
-        "value": "af9015660638fc4b106e88f258fdc5825fee80997a3afc0c2758e8b3cadbbd10"
+        "value": "06855ce5d260e3078eab0e8251d98fda559bd416d0223bdb19644db714b352c3"
       },
-      "size_bytes": 189,
+      "size_bytes": 239,
       "created_at": "2026-08-01T00:00:00Z",
       "source": "infrastructure.text-model-serving@1.0.0",
       "satisfies_refs": [],
@@ -109,5 +109,5 @@
       "description": null
     }
   },
-  "set_digest": "sha256:98b13d3cdad66c728fc976cff78316474b2ae391a06a9f441c61329f7692911f"
+  "set_digest": "sha256:f4da60e705109a8aefd8b0d9bec76a2fd855e422bf220b9526cb1bdfc48302ca"
 }

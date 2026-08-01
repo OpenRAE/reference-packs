@@ -2,8 +2,8 @@ schema_version: environment-pack-kit/v1
 id: infrastructure.load-rehearsal-runner
 version: 1.0.0
 title: Load/rehearsal runner
-summary: Reusable load/rehearsal runner infrastructure with configurable profile and
-  service identity.
+summary: Reusable load/rehearsal runner with domain-specific configuration, declared
+  service surfaces, seeded objects, and pack-local integration material.
 concern: policy-operations
 released_at: '2026-08-01T00:00:00Z'
 module:
@@ -22,10 +22,16 @@ resources:
   memory_mib: 2048
   storage_mib: 4096
   notes: Planning estimates only; realization sizing remains backend-owned.
-prerequisites: []
+prerequisites:
+- kind: external
+  id: workload-targets
+  version: raes-3.2
+  description: Select imported services as bounded workload targets.
 limitations:
-- Declares static infrastructure and integration surfaces only.
-- Does not claim launch, readiness, traffic attachment, or runtime evidence.
+- Declares static infrastructure, seeded state, and integration surfaces only.
+- Does not claim launch, readiness, traffic attachment, credential delivery, or runtime
+  evidence.
+- Select imported services as bounded workload targets.
 license:
   expression: MIT
   redistribution: open

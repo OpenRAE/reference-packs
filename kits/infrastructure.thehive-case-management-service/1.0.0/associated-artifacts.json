@@ -8,42 +8,10 @@
     "ref_kind": "scenario-snapshot",
     "ref_id": "thehive-case-management-service",
     "ref_version": null,
-    "ref_digest": "sha256:461bc69992f894cf0adfcdfe051483b96a9841ec92960fb6b1e0f7ceb1d76ebc",
+    "ref_digest": "sha256:b145328da6d41b295ecda267c18c2902ec6bf4f70dee253b228ebd3fffee9e1e",
     "ref_path": null
   },
   "artifacts": {
-    "kit-manifest": {
-      "artifact_id": "kit-manifest",
-      "role": "manifest",
-      "media_type": "application/yaml",
-      "uri": "raes-environment-kit:/kit.yaml",
-      "checksum": {
-        "algorithm": "sha256",
-        "value": "f05a34006fe11e9f6a80579423eb62ffc2fb81c52d4778fc631eb2beb73ac447"
-      },
-      "size_bytes": 1731,
-      "created_at": "2026-08-01T00:00:00Z",
-      "source": "infrastructure.thehive-case-management-service@1.0.0",
-      "satisfies_refs": [],
-      "sensitivity": "public",
-      "description": null
-    },
-    "module": {
-      "artifact_id": "module",
-      "role": "configuration",
-      "media_type": "application/yaml",
-      "uri": "raes-environment-kit:/module.sdl.yaml",
-      "checksum": {
-        "algorithm": "sha256",
-        "value": "214e1bb664038d9904c7e5b38fb35ef8a23e9c4d8e79452103ca3e01729a8fec"
-      },
-      "size_bytes": 1309,
-      "created_at": "2026-08-01T00:00:00Z",
-      "source": "infrastructure.thehive-case-management-service@1.0.0",
-      "satisfies_refs": [],
-      "sensitivity": "public",
-      "description": null
-    },
     "readme": {
       "artifact_id": "readme",
       "role": "documentation",
@@ -51,9 +19,9 @@
       "uri": "raes-environment-kit:/README.md",
       "checksum": {
         "algorithm": "sha256",
-        "value": "3b814674d9ef0c2451e60812611cdbd55a38d09aa4761098a45f83886000fe3d"
+        "value": "73149a6598b7700ae298b497e07891e535fe01c9358c16d24106372ee8b21835"
       },
-      "size_bytes": 269,
+      "size_bytes": 495,
       "created_at": "2026-08-01T00:00:00Z",
       "source": "infrastructure.thehive-case-management-service@1.0.0",
       "satisfies_refs": [],
@@ -67,9 +35,9 @@
       "uri": "raes-environment-kit:/assets/integration.md",
       "checksum": {
         "algorithm": "sha256",
-        "value": "48219b1535a306dae5dbce36c3feaa881d2068e1ce5d5e62693015dfa737450e"
+        "value": "79339aeb6ef8740a5c2dd80d8e8568f8ab4c0b36a011c71a99ca0147b602ecce"
       },
-      "size_bytes": 138,
+      "size_bytes": 549,
       "created_at": "2026-08-01T00:00:00Z",
       "source": "infrastructure.thehive-case-management-service@1.0.0",
       "satisfies_refs": [],
@@ -83,9 +51,41 @@
       "uri": "raes-environment-kit:/assets/seed.yaml",
       "checksum": {
         "algorithm": "sha256",
-        "value": "10aae44a69d19a92707f59a6450298e347b0e600b41539791af4e3c256be9dd8"
+        "value": "126e20453f753e5958f4accd8f36382a021aae1cba984fcd5ac1a558c79366e2"
       },
-      "size_bytes": 168,
+      "size_bytes": 666,
+      "created_at": "2026-08-01T00:00:00Z",
+      "source": "infrastructure.thehive-case-management-service@1.0.0",
+      "satisfies_refs": [],
+      "sensitivity": "public",
+      "description": null
+    },
+    "kit-manifest": {
+      "artifact_id": "kit-manifest",
+      "role": "manifest",
+      "media_type": "application/yaml",
+      "uri": "raes-environment-kit:/kit.yaml",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "1b7fdd56f9d645a276ded221c447a45b53c44c4ac70f99a2f45ae3e46efbbc27"
+      },
+      "size_bytes": 1938,
+      "created_at": "2026-08-01T00:00:00Z",
+      "source": "infrastructure.thehive-case-management-service@1.0.0",
+      "satisfies_refs": [],
+      "sensitivity": "public",
+      "description": null
+    },
+    "module": {
+      "artifact_id": "module",
+      "role": "configuration",
+      "media_type": "application/yaml",
+      "uri": "raes-environment-kit:/module.sdl.yaml",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "3489525a2fda194303bf37b25d02e002e36e7bb155e7c0a4decf8cdd3e476c3d"
+      },
+      "size_bytes": 3148,
       "created_at": "2026-08-01T00:00:00Z",
       "source": "infrastructure.thehive-case-management-service@1.0.0",
       "satisfies_refs": [],
@@ -99,9 +99,9 @@
       "uri": "raes-environment-kit:/tests/composition.yaml",
       "checksum": {
         "algorithm": "sha256",
-        "value": "fc1fa74a4b68444586b3c1ecd3f61739b55e62ec90e5b2d4abfaf0b7f02a03a6"
+        "value": "0b69719d99270c0862de6e9fa120ea86eb50acae397c44d9957df4918c212544"
       },
-      "size_bytes": 226,
+      "size_bytes": 288,
       "created_at": "2026-08-01T00:00:00Z",
       "source": "infrastructure.thehive-case-management-service@1.0.0",
       "satisfies_refs": [],
@@ -109,5 +109,5 @@
       "description": null
     }
   },
-  "set_digest": "sha256:ab058c933e3d306fd78e83acc69c1f57e79d6ca4213beecb540c8a3873da391b"
+  "set_digest": "sha256:bdc8028d1a5c0bd559506bad74e936e0a86619b800523559c3f336dcb7224281"
 }

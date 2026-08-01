@@ -1,5 +1,22 @@
-schema_version: reference-kit-seed/v1
+schema_version: environment-kit-seed/v1
 kit: infrastructure.notebook-environment
-service_instances:
-- notebook
-fixture_profile: benign-reference
+configuration:
+  workspace_name: analysis
+  deployment_profile: standard
+  service_label: notebook-environment
+declared_objects:
+- id: workspace
+  kind: infrastructure-seed
+  sensitivity: non-secret
+- id: kernels
+  kind: infrastructure-seed
+  sensitivity: non-secret
+- id: notebooks
+  kind: infrastructure-seed
+  sensitivity: non-secret
+- id: data_mounts
+  kind: infrastructure-seed
+  sensitivity: non-secret
+integration_requirements:
+- No mandatory external authoring prerequisite; connect exported surfaces at the pack
+  composition root as needed.

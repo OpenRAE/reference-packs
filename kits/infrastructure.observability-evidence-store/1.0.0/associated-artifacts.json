@@ -8,42 +8,10 @@
     "ref_kind": "scenario-snapshot",
     "ref_id": "observability-evidence-store",
     "ref_version": null,
-    "ref_digest": "sha256:5a34ebb5b88495489e5ec0d99b00b609100aa6c0296bfc0b6515fa99b653ba74",
+    "ref_digest": "sha256:f54e908982cd62f877e5c50f6f7b2810a57f696bf4dba8d8160fa686cb0cc4f0",
     "ref_path": null
   },
   "artifacts": {
-    "kit-manifest": {
-      "artifact_id": "kit-manifest",
-      "role": "manifest",
-      "media_type": "application/yaml",
-      "uri": "raes-environment-kit:/kit.yaml",
-      "checksum": {
-        "algorithm": "sha256",
-        "value": "a99c77249973f953fa31142fa693c2cdc8c09c7e258beada4c8662606f42a50f"
-      },
-      "size_bytes": 1714,
-      "created_at": "2026-08-01T00:00:00Z",
-      "source": "infrastructure.observability-evidence-store@1.0.0",
-      "satisfies_refs": [],
-      "sensitivity": "public",
-      "description": null
-    },
-    "module": {
-      "artifact_id": "module",
-      "role": "configuration",
-      "media_type": "application/yaml",
-      "uri": "raes-environment-kit:/module.sdl.yaml",
-      "checksum": {
-        "algorithm": "sha256",
-        "value": "d3a475eb3790991611c63bb4e93d062e642ef8f31fdc157bbb5e78c01dfa962f"
-      },
-      "size_bytes": 1280,
-      "created_at": "2026-08-01T00:00:00Z",
-      "source": "infrastructure.observability-evidence-store@1.0.0",
-      "satisfies_refs": [],
-      "sensitivity": "public",
-      "description": null
-    },
     "readme": {
       "artifact_id": "readme",
       "role": "documentation",
@@ -51,9 +19,9 @@
       "uri": "raes-environment-kit:/README.md",
       "checksum": {
         "algorithm": "sha256",
-        "value": "c9e5b58e354b75ba433cade5ac2b545677295409573058bdb1704483607a89ee"
+        "value": "0dc4d1a4bc302ca66a7bc1c5e762aac4582d741a762b78ef8f9159a8bcd0fdb8"
       },
-      "size_bytes": 263,
+      "size_bytes": 489,
       "created_at": "2026-08-01T00:00:00Z",
       "source": "infrastructure.observability-evidence-store@1.0.0",
       "satisfies_refs": [],
@@ -67,9 +35,9 @@
       "uri": "raes-environment-kit:/assets/integration.md",
       "checksum": {
         "algorithm": "sha256",
-        "value": "f44b0615eb104f9ccde2b3408dae733d3ada69986c2a512879e16c1b5fa39d8d"
+        "value": "c85469dfa09ce165a1a62f1b786da28a95d9ec00817122c15e8ab42280793103"
       },
-      "size_bytes": 135,
+      "size_bytes": 548,
       "created_at": "2026-08-01T00:00:00Z",
       "source": "infrastructure.observability-evidence-store@1.0.0",
       "satisfies_refs": [],
@@ -83,9 +51,41 @@
       "uri": "raes-environment-kit:/assets/seed.yaml",
       "checksum": {
         "algorithm": "sha256",
-        "value": "c3cdad436ef88dfc990dfce803225647e4c79fa5de04275ec4ae482711181f46"
+        "value": "8cf3ede59ed8a9765886f2363d0f93da37e07b3b8c09cc2d6464048480f29518"
       },
-      "size_bytes": 159,
+      "size_bytes": 671,
+      "created_at": "2026-08-01T00:00:00Z",
+      "source": "infrastructure.observability-evidence-store@1.0.0",
+      "satisfies_refs": [],
+      "sensitivity": "public",
+      "description": null
+    },
+    "kit-manifest": {
+      "artifact_id": "kit-manifest",
+      "role": "manifest",
+      "media_type": "application/yaml",
+      "uri": "raes-environment-kit:/kit.yaml",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "9956e78a48447f7b018a43fe354eeea43a6de14dbb7942299c191540ee93fd7f"
+      },
+      "size_bytes": 1921,
+      "created_at": "2026-08-01T00:00:00Z",
+      "source": "infrastructure.observability-evidence-store@1.0.0",
+      "satisfies_refs": [],
+      "sensitivity": "public",
+      "description": null
+    },
+    "module": {
+      "artifact_id": "module",
+      "role": "configuration",
+      "media_type": "application/yaml",
+      "uri": "raes-environment-kit:/module.sdl.yaml",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "8c47edd9297460bad9ca6bc8f42b1db5423b8f40c727ccaa9caa15549e62b3b7"
+      },
+      "size_bytes": 3698,
       "created_at": "2026-08-01T00:00:00Z",
       "source": "infrastructure.observability-evidence-store@1.0.0",
       "satisfies_refs": [],
@@ -99,9 +99,9 @@
       "uri": "raes-environment-kit:/tests/composition.yaml",
       "checksum": {
         "algorithm": "sha256",
-        "value": "7c48f995deaa1002e8fe1936494f7f1776aead83242c4c2d28cdb31b3d8e6704"
+        "value": "34d17ae27206214d8ab12f621791a9a0037079e93c0daab1017c80b924245e8a"
       },
-      "size_bytes": 218,
+      "size_bytes": 278,
       "created_at": "2026-08-01T00:00:00Z",
       "source": "infrastructure.observability-evidence-store@1.0.0",
       "satisfies_refs": [],
@@ -109,5 +109,5 @@
       "description": null
     }
   },
-  "set_digest": "sha256:1621750d8108bd1f1c56a6ae405508901794746d200bb1d1f9ae42c944cb519a"
+  "set_digest": "sha256:1ec614a98a1d050eb8bff70669382b83b2794e34774da99dcb4a70efa3c26f13"
 }

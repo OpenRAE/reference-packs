@@ -2,8 +2,8 @@ schema_version: environment-pack-kit/v1
 id: infrastructure.reverse-proxy-api-gateway
 version: 1.0.0
 title: Reverse proxy/API gateway
-summary: Reusable reverse proxy/api gateway infrastructure with configurable profile
-  and service identity.
+summary: Reusable reverse proxy/api gateway with domain-specific configuration, declared
+  service surfaces, seeded objects, and pack-local integration material.
 concern: network-shared
 released_at: '2026-08-01T00:00:00Z'
 module:
@@ -22,10 +22,17 @@ resources:
   memory_mib: 2048
   storage_mib: 4096
   notes: Planning estimates only; realization sizing remains backend-owned.
-prerequisites: []
+prerequisites:
+- kind: external
+  id: upstream-application
+  version: raes-3.2
+  description: Add pack-level proxy-upstream relationships to imported application
+    services.
 limitations:
-- Declares static infrastructure and integration surfaces only.
-- Does not claim launch, readiness, traffic attachment, or runtime evidence.
+- Declares static infrastructure, seeded state, and integration surfaces only.
+- Does not claim launch, readiness, traffic attachment, credential delivery, or runtime
+  evidence.
+- Add pack-level proxy-upstream relationships to imported application services.
 license:
   expression: MIT
   redistribution: open

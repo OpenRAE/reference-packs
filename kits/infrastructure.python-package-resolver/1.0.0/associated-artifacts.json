@@ -8,42 +8,10 @@
     "ref_kind": "scenario-snapshot",
     "ref_id": "python-package-resolver",
     "ref_version": null,
-    "ref_digest": "sha256:8b44ff11f0757e96eee6c0b159943e61d4a0e4fae460e0cfdc4feec83628928e",
+    "ref_digest": "sha256:939a5a33908bc3ee72095ffd1a990e9b589cd73315c7b76850c501b6717f735b",
     "ref_path": null
   },
   "artifacts": {
-    "kit-manifest": {
-      "artifact_id": "kit-manifest",
-      "role": "manifest",
-      "media_type": "application/yaml",
-      "uri": "raes-environment-kit:/kit.yaml",
-      "checksum": {
-        "algorithm": "sha256",
-        "value": "b75b4c537bee57af2091abdd004efef93d677436ba2a72b51b9bdc90fb30fc53"
-      },
-      "size_bytes": 1463,
-      "created_at": "2026-08-01T00:00:00Z",
-      "source": "infrastructure.python-package-resolver@1.0.0",
-      "satisfies_refs": [],
-      "sensitivity": "public",
-      "description": null
-    },
-    "module": {
-      "artifact_id": "module",
-      "role": "configuration",
-      "media_type": "application/yaml",
-      "uri": "raes-environment-kit:/module.sdl.yaml",
-      "checksum": {
-        "algorithm": "sha256",
-        "value": "da2d655b1fe4f57cc92ee8ca385b9ef26a30e35bc1b7f6203869b495832235bd"
-      },
-      "size_bytes": 890,
-      "created_at": "2026-08-01T00:00:00Z",
-      "source": "infrastructure.python-package-resolver@1.0.0",
-      "satisfies_refs": [],
-      "sensitivity": "public",
-      "description": null
-    },
     "readme": {
       "artifact_id": "readme",
       "role": "documentation",
@@ -51,9 +19,9 @@
       "uri": "raes-environment-kit:/README.md",
       "checksum": {
         "algorithm": "sha256",
-        "value": "1013ac6f7a0b5d36cc5b74eb7084d73d922de7ba6a784a5836ce0f4f0e088703"
+        "value": "11301646bfce52a1ab31624ea9b8cc52cbb98535c8b9a9c0b009e3541fa1eb36"
       },
-      "size_bytes": 253,
+      "size_bytes": 479,
       "created_at": "2026-08-01T00:00:00Z",
       "source": "infrastructure.python-package-resolver@1.0.0",
       "satisfies_refs": [],
@@ -67,9 +35,9 @@
       "uri": "raes-environment-kit:/assets/integration.md",
       "checksum": {
         "algorithm": "sha256",
-        "value": "c1bb97aa2e42a1c0319c75e3709c25515090075bc49f4f780650fade34455f21"
+        "value": "eeedb7cceed2cacd6e833ac3f5d1e0b175e4517229ad416aa8a20d6759bf00fb"
       },
-      "size_bytes": 130,
+      "size_bytes": 515,
       "created_at": "2026-08-01T00:00:00Z",
       "source": "infrastructure.python-package-resolver@1.0.0",
       "satisfies_refs": [],
@@ -83,9 +51,41 @@
       "uri": "raes-environment-kit:/assets/seed.yaml",
       "checksum": {
         "algorithm": "sha256",
-        "value": "cddb1edf2ecc192cf027167d4b2422489e3529be619886d5194aed096669752f"
+        "value": "7e1615c4864fa8addf5e181866c03d4ababd187605e7f01e0251208c6a2a1182"
       },
-      "size_bytes": 146,
+      "size_bytes": 655,
+      "created_at": "2026-08-01T00:00:00Z",
+      "source": "infrastructure.python-package-resolver@1.0.0",
+      "satisfies_refs": [],
+      "sensitivity": "public",
+      "description": null
+    },
+    "kit-manifest": {
+      "artifact_id": "kit-manifest",
+      "role": "manifest",
+      "media_type": "application/yaml",
+      "uri": "raes-environment-kit:/kit.yaml",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "edccbda5081b20692143c5aec1af03ca33fc90a8b615b738553fa63b08dd40c1"
+      },
+      "size_bytes": 1670,
+      "created_at": "2026-08-01T00:00:00Z",
+      "source": "infrastructure.python-package-resolver@1.0.0",
+      "satisfies_refs": [],
+      "sensitivity": "public",
+      "description": null
+    },
+    "module": {
+      "artifact_id": "module",
+      "role": "configuration",
+      "media_type": "application/yaml",
+      "uri": "raes-environment-kit:/module.sdl.yaml",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "664159ab6870a5ba0cef7502c3391b2138abd84309f5a1c3d43885fc488d3376"
+      },
+      "size_bytes": 2733,
       "created_at": "2026-08-01T00:00:00Z",
       "source": "infrastructure.python-package-resolver@1.0.0",
       "satisfies_refs": [],
@@ -99,9 +99,9 @@
       "uri": "raes-environment-kit:/tests/composition.yaml",
       "checksum": {
         "algorithm": "sha256",
-        "value": "c52091995ae1eba09e416d066bd77321ef1a7cb30af47fc17d75efd0a16f6487"
+        "value": "a28c36ddd7b9df32bd5e8864495edd5717267a5d9b3dfcadbfb198f73cdaaef4"
       },
-      "size_bytes": 199,
+      "size_bytes": 245,
       "created_at": "2026-08-01T00:00:00Z",
       "source": "infrastructure.python-package-resolver@1.0.0",
       "satisfies_refs": [],
@@ -109,5 +109,5 @@
       "description": null
     }
   },
-  "set_digest": "sha256:bfe8680c755ac056103fcb9c4d51b83423422d521702398e0f868bdf2cbbfdf3"
+  "set_digest": "sha256:c3bf98a520d557456b5cd2dcd1a77c09ce9f28b4f04aae1004480d1589e40c9b"
 }

@@ -8,42 +8,10 @@
     "ref_kind": "scenario-snapshot",
     "ref_id": "wazuh-security-monitoring-stack",
     "ref_version": null,
-    "ref_digest": "sha256:176f140079cc30b152984f8aaa810f1949a80ed44a3988991b2033dcdf7173d5",
+    "ref_digest": "sha256:5084d42bd3b8caff80c2f9489dd0b8b44c024f93213c6f92fd412ab5d2fe571b",
     "ref_path": null
   },
   "artifacts": {
-    "kit-manifest": {
-      "artifact_id": "kit-manifest",
-      "role": "manifest",
-      "media_type": "application/yaml",
-      "uri": "raes-environment-kit:/kit.yaml",
-      "checksum": {
-        "algorithm": "sha256",
-        "value": "e7eea497af933dbf64e65366ff35708966c8bcc43d6ac1d953b6c38ac91b44fe"
-      },
-      "size_bytes": 1956,
-      "created_at": "2026-08-01T00:00:00Z",
-      "source": "infrastructure.wazuh-security-monitoring-stack@1.0.0",
-      "satisfies_refs": [],
-      "sensitivity": "public",
-      "description": null
-    },
-    "module": {
-      "artifact_id": "module",
-      "role": "configuration",
-      "media_type": "application/yaml",
-      "uri": "raes-environment-kit:/module.sdl.yaml",
-      "checksum": {
-        "algorithm": "sha256",
-        "value": "dc0d4f9ac32a98c45982f979081b6d62592822656a6169bc309139bbb5a1cc3d"
-      },
-      "size_bytes": 1791,
-      "created_at": "2026-08-01T00:00:00Z",
-      "source": "infrastructure.wazuh-security-monitoring-stack@1.0.0",
-      "satisfies_refs": [],
-      "sensitivity": "public",
-      "description": null
-    },
     "readme": {
       "artifact_id": "readme",
       "role": "documentation",
@@ -51,9 +19,9 @@
       "uri": "raes-environment-kit:/README.md",
       "checksum": {
         "algorithm": "sha256",
-        "value": "9241cdf1ef689569c43be7426a15745bc978bc79ac62769604a4d2c8369d9895"
+        "value": "ade06fc423047bb4dee7f398569d550140fa1f38359b41f2ada0f579fdf5aee0"
       },
-      "size_bytes": 269,
+      "size_bytes": 495,
       "created_at": "2026-08-01T00:00:00Z",
       "source": "infrastructure.wazuh-security-monitoring-stack@1.0.0",
       "satisfies_refs": [],
@@ -67,9 +35,9 @@
       "uri": "raes-environment-kit:/assets/integration.md",
       "checksum": {
         "algorithm": "sha256",
-        "value": "bc4041e1119caaa70d3da9459bc4c2451918c0ef429028e701b7d8ff4c0f5623"
+        "value": "c9973c2dcab36a6d077174486c9e43b6c2eba18969741b13d836a6a572625136"
       },
-      "size_bytes": 138,
+      "size_bytes": 563,
       "created_at": "2026-08-01T00:00:00Z",
       "source": "infrastructure.wazuh-security-monitoring-stack@1.0.0",
       "satisfies_refs": [],
@@ -83,9 +51,41 @@
       "uri": "raes-environment-kit:/assets/seed.yaml",
       "checksum": {
         "algorithm": "sha256",
-        "value": "f21de48d262f027b44fdf71fd1548ddd85587bd72e2afe58949d03c2c3de520d"
+        "value": "593fedc54d031ace4941eae9596fd1ea7e9588274cdfe4611720da2216c197c0"
       },
-      "size_bytes": 175,
+      "size_bytes": 675,
+      "created_at": "2026-08-01T00:00:00Z",
+      "source": "infrastructure.wazuh-security-monitoring-stack@1.0.0",
+      "satisfies_refs": [],
+      "sensitivity": "public",
+      "description": null
+    },
+    "kit-manifest": {
+      "artifact_id": "kit-manifest",
+      "role": "manifest",
+      "media_type": "application/yaml",
+      "uri": "raes-environment-kit:/kit.yaml",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "bf22dcbaf8fff6c7e1f37dc1f0a8a0ee220d3e3cd805df13cced96d6f38fc529"
+      },
+      "size_bytes": 2163,
+      "created_at": "2026-08-01T00:00:00Z",
+      "source": "infrastructure.wazuh-security-monitoring-stack@1.0.0",
+      "satisfies_refs": [],
+      "sensitivity": "public",
+      "description": null
+    },
+    "module": {
+      "artifact_id": "module",
+      "role": "configuration",
+      "media_type": "application/yaml",
+      "uri": "raes-environment-kit:/module.sdl.yaml",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "2a160d7e45a92298fe2745fcaf33f4f2684a4a4c3a9cb8be2f8b2dc0a0365960"
+      },
+      "size_bytes": 4208,
       "created_at": "2026-08-01T00:00:00Z",
       "source": "infrastructure.wazuh-security-monitoring-stack@1.0.0",
       "satisfies_refs": [],
@@ -99,9 +99,9 @@
       "uri": "raes-environment-kit:/tests/composition.yaml",
       "checksum": {
         "algorithm": "sha256",
-        "value": "0df59a116f41ca4d211d5d4af24de98c9425d6495f844010b7dc31caed08ccf4"
+        "value": "4166b838d15d1034fa01ad6ecfc5511929125dfa7513f4030ac499b20c348311"
       },
-      "size_bytes": 226,
+      "size_bytes": 280,
       "created_at": "2026-08-01T00:00:00Z",
       "source": "infrastructure.wazuh-security-monitoring-stack@1.0.0",
       "satisfies_refs": [],
@@ -109,5 +109,5 @@
       "description": null
     }
   },
-  "set_digest": "sha256:a1faa14affb3f470cd5d99296344f97103393f44d8a0ff28cc58bac720121913"
+  "set_digest": "sha256:a62c6b6d9243c144573e8eef5c14185431140f6a5c566c7efaec33c5c6f490a0"
 }

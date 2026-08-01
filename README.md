@@ -2,6 +2,10 @@
 
 Reusable, inspectable RAES infrastructure modules for environment-pack authors. Kits are ordinary authoring content: they add no runtime API and make no backend compatibility or realization claim.
 
+The [content strategy](docs/content-strategy.md) defines the eight infrastructure
+concerns, the minimum quality bar for every release, and the boundary between
+reusable authoring content and backend realization.
+
 ## Released kits
 
 - `infrastructure.windows-active-directory-domain-controller@1.0.0`

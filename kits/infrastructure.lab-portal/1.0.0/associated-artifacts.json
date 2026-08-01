@@ -8,42 +8,10 @@
     "ref_kind": "scenario-snapshot",
     "ref_id": "lab-portal",
     "ref_version": null,
-    "ref_digest": "sha256:265f385a57ce987a248f1990a65d3ad2f99c72ca3fc0a86380b10a2d26e4c361",
+    "ref_digest": "sha256:22158fffd9041b5748ef577cfb912dd7e68f329ce0c7ff5717a8305a720cf5d4",
     "ref_path": null
   },
   "artifacts": {
-    "kit-manifest": {
-      "artifact_id": "kit-manifest",
-      "role": "manifest",
-      "media_type": "application/yaml",
-      "uri": "raes-environment-kit:/kit.yaml",
-      "checksum": {
-        "algorithm": "sha256",
-        "value": "94b16eb706f3c6a68d687aa6d261a2e0c2125a4633fe88b37cc2b07c2f1c0261"
-      },
-      "size_bytes": 1419,
-      "created_at": "2026-08-01T00:00:00Z",
-      "source": "infrastructure.lab-portal@1.0.0",
-      "satisfies_refs": [],
-      "sensitivity": "public",
-      "description": null
-    },
-    "module": {
-      "artifact_id": "module",
-      "role": "configuration",
-      "media_type": "application/yaml",
-      "uri": "raes-environment-kit:/module.sdl.yaml",
-      "checksum": {
-        "algorithm": "sha256",
-        "value": "2f243c74446c8ea531925588da520062d78d1f2f9d034eaf580796f68965626c"
-      },
-      "size_bytes": 808,
-      "created_at": "2026-08-01T00:00:00Z",
-      "source": "infrastructure.lab-portal@1.0.0",
-      "satisfies_refs": [],
-      "sensitivity": "public",
-      "description": null
-    },
     "readme": {
       "artifact_id": "readme",
       "role": "documentation",
@@ -51,9 +19,9 @@
       "uri": "raes-environment-kit:/README.md",
       "checksum": {
         "algorithm": "sha256",
-        "value": "515a97af7d74af645dab6c29edebe91abdaa70000ccce454ef32f93b21750003"
+        "value": "7908cf0886d65a36d32cf4568cf0a8055b31e9da427975849bef4ee2b45eadc4"
       },
-      "size_bytes": 227,
+      "size_bytes": 453,
       "created_at": "2026-08-01T00:00:00Z",
       "source": "infrastructure.lab-portal@1.0.0",
       "satisfies_refs": [],
@@ -67,9 +35,9 @@
       "uri": "raes-environment-kit:/assets/integration.md",
       "checksum": {
         "algorithm": "sha256",
-        "value": "8f0682ac0e7cc8284bccc86710f3f86a1f6607bd2ea9bf36ef50a4df54c0d00a"
+        "value": "e7b63ae51ed3eb52fbefff22d8e3a91f891483281a81cee96c2cf903a2b4eec1"
       },
-      "size_bytes": 117,
+      "size_bytes": 456,
       "created_at": "2026-08-01T00:00:00Z",
       "source": "infrastructure.lab-portal@1.0.0",
       "satisfies_refs": [],
@@ -83,9 +51,41 @@
       "uri": "raes-environment-kit:/assets/seed.yaml",
       "checksum": {
         "algorithm": "sha256",
-        "value": "23ab91bc8fc5aaf45aa419978a045b6cc4aa4f45eea39da91da9c229b7c6013a"
+        "value": "1e52b85f4934611e67dbce320e4f3732c2224404f7a2e82e9795cf74a789b0d7"
       },
-      "size_bytes": 131,
+      "size_bytes": 517,
+      "created_at": "2026-08-01T00:00:00Z",
+      "source": "infrastructure.lab-portal@1.0.0",
+      "satisfies_refs": [],
+      "sensitivity": "public",
+      "description": null
+    },
+    "kit-manifest": {
+      "artifact_id": "kit-manifest",
+      "role": "manifest",
+      "media_type": "application/yaml",
+      "uri": "raes-environment-kit:/kit.yaml",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "3000fe92b36a0e09c97ff21c85401564280439e6e2ef2adc753f03fd144eb24f"
+      },
+      "size_bytes": 1708,
+      "created_at": "2026-08-01T00:00:00Z",
+      "source": "infrastructure.lab-portal@1.0.0",
+      "satisfies_refs": [],
+      "sensitivity": "public",
+      "description": null
+    },
+    "module": {
+      "artifact_id": "module",
+      "role": "configuration",
+      "media_type": "application/yaml",
+      "uri": "raes-environment-kit:/module.sdl.yaml",
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "35748976c68c6c2533df66e2f089f9f6c6da74e81a92c4259f836e7ad671ad02"
+      },
+      "size_bytes": 2480,
       "created_at": "2026-08-01T00:00:00Z",
       "source": "infrastructure.lab-portal@1.0.0",
       "satisfies_refs": [],
@@ -99,9 +99,9 @@
       "uri": "raes-environment-kit:/tests/composition.yaml",
       "checksum": {
         "algorithm": "sha256",
-        "value": "66ea385d132279074c5a9dd80df354a6158824b8d9aaec2947fa08465f571da3"
+        "value": "ef1fabf25e25f7515015ed033755b7570c3dbc41c14204f0c48dd7c52d79168a"
       },
-      "size_bytes": 188,
+      "size_bytes": 255,
       "created_at": "2026-08-01T00:00:00Z",
       "source": "infrastructure.lab-portal@1.0.0",
       "satisfies_refs": [],
@@ -109,5 +109,5 @@
       "description": null
     }
   },
-  "set_digest": "sha256:f8ff38af4ffbc0c1cf1095049695510ebbf5b684ff6b4fd90542d6550e6286e4"
+  "set_digest": "sha256:24bf2bedd6cc25ae6ea0410feb7129610aec97f17e01a51fa0ebedc17dfb0322"
 }
